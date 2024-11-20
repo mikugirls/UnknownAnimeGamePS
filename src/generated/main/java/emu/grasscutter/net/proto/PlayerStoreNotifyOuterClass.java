@@ -19,49 +19,81 @@ public final class PlayerStoreNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .Item item_list = 1;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>repeated .Item item_list = 3;</code>
      */
     java.util.List<emu.grasscutter.net.proto.ItemOuterClass.Item> 
         getItemListList();
     /**
-     * <code>repeated .Item item_list = 1;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>repeated .Item item_list = 3;</code>
      */
     emu.grasscutter.net.proto.ItemOuterClass.Item getItemList(int index);
     /**
-     * <code>repeated .Item item_list = 1;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>repeated .Item item_list = 3;</code>
      */
     int getItemListCount();
     /**
-     * <code>repeated .Item item_list = 1;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>repeated .Item item_list = 3;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder> 
         getItemListOrBuilderList();
     /**
-     * <code>repeated .Item item_list = 1;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>repeated .Item item_list = 3;</code>
      */
     emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder getItemListOrBuilder(
         int index);
 
     /**
-     * <code>.StoreType store_type = 5;</code>
-     * @return The enum numeric value on the wire for storeType.
-     */
-    int getStoreTypeValue();
-    /**
-     * <code>.StoreType store_type = 5;</code>
-     * @return The storeType.
-     */
-    emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType getStoreType();
-
-    /**
+     * <pre>
+     * Offset: 0x28
+     * </pre>
+     *
      * <code>uint32 weight_limit = 8;</code>
      * @return The weightLimit.
      */
     int getWeightLimit();
+
+    /**
+     * <pre>
+     * Offset: 0x2C
+     * </pre>
+     *
+     * <code>.StoreType store_type = 10;</code>
+     * @return The enum numeric value on the wire for storeType.
+     */
+    int getStoreTypeValue();
+    /**
+     * <pre>
+     * Offset: 0x2C
+     * </pre>
+     *
+     * <code>.StoreType store_type = 10;</code>
+     * @return The storeType.
+     */
+    emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType getStoreType();
   }
   /**
    * <pre>
-   * CmdId: 7845
+   * CmdId: 424
    * </pre>
    *
    * Protobuf type {@code PlayerStoreNotify}
@@ -111,7 +143,7 @@ public final class PlayerStoreNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 10: {
+            case 26: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 itemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemOuterClass.Item>();
                 mutable_bitField0_ |= 0x00000001;
@@ -120,15 +152,15 @@ public final class PlayerStoreNotifyOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.ItemOuterClass.Item.parser(), extensionRegistry));
               break;
             }
-            case 40: {
-              int rawValue = input.readEnum();
-
-              storeType_ = rawValue;
-              break;
-            }
             case 64: {
 
               weightLimit_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+              int rawValue = input.readEnum();
+
+              storeType_ = rawValue;
               break;
             }
             default: {
@@ -166,17 +198,25 @@ public final class PlayerStoreNotifyOuterClass {
               emu.grasscutter.net.proto.PlayerStoreNotifyOuterClass.PlayerStoreNotify.class, emu.grasscutter.net.proto.PlayerStoreNotifyOuterClass.PlayerStoreNotify.Builder.class);
     }
 
-    public static final int ITEM_LIST_FIELD_NUMBER = 1;
+    public static final int ITEM_LIST_FIELD_NUMBER = 3;
     private java.util.List<emu.grasscutter.net.proto.ItemOuterClass.Item> itemList_;
     /**
-     * <code>repeated .Item item_list = 1;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>repeated .Item item_list = 3;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.ItemOuterClass.Item> getItemListList() {
       return itemList_;
     }
     /**
-     * <code>repeated .Item item_list = 1;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>repeated .Item item_list = 3;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder> 
@@ -184,21 +224,33 @@ public final class PlayerStoreNotifyOuterClass {
       return itemList_;
     }
     /**
-     * <code>repeated .Item item_list = 1;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>repeated .Item item_list = 3;</code>
      */
     @java.lang.Override
     public int getItemListCount() {
       return itemList_.size();
     }
     /**
-     * <code>repeated .Item item_list = 1;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>repeated .Item item_list = 3;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ItemOuterClass.Item getItemList(int index) {
       return itemList_.get(index);
     }
     /**
-     * <code>repeated .Item item_list = 1;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>repeated .Item item_list = 3;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder getItemListOrBuilder(
@@ -206,34 +258,46 @@ public final class PlayerStoreNotifyOuterClass {
       return itemList_.get(index);
     }
 
-    public static final int STORE_TYPE_FIELD_NUMBER = 5;
-    private int storeType_;
-    /**
-     * <code>.StoreType store_type = 5;</code>
-     * @return The enum numeric value on the wire for storeType.
-     */
-    @java.lang.Override public int getStoreTypeValue() {
-      return storeType_;
-    }
-    /**
-     * <code>.StoreType store_type = 5;</code>
-     * @return The storeType.
-     */
-    @java.lang.Override public emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType getStoreType() {
-      @SuppressWarnings("deprecation")
-      emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType result = emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType.valueOf(storeType_);
-      return result == null ? emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType.UNRECOGNIZED : result;
-    }
-
     public static final int WEIGHT_LIMIT_FIELD_NUMBER = 8;
     private int weightLimit_;
     /**
+     * <pre>
+     * Offset: 0x28
+     * </pre>
+     *
      * <code>uint32 weight_limit = 8;</code>
      * @return The weightLimit.
      */
     @java.lang.Override
     public int getWeightLimit() {
       return weightLimit_;
+    }
+
+    public static final int STORE_TYPE_FIELD_NUMBER = 10;
+    private int storeType_;
+    /**
+     * <pre>
+     * Offset: 0x2C
+     * </pre>
+     *
+     * <code>.StoreType store_type = 10;</code>
+     * @return The enum numeric value on the wire for storeType.
+     */
+    @java.lang.Override public int getStoreTypeValue() {
+      return storeType_;
+    }
+    /**
+     * <pre>
+     * Offset: 0x2C
+     * </pre>
+     *
+     * <code>.StoreType store_type = 10;</code>
+     * @return The storeType.
+     */
+    @java.lang.Override public emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType getStoreType() {
+      @SuppressWarnings("deprecation")
+      emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType result = emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType.valueOf(storeType_);
+      return result == null ? emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -251,13 +315,13 @@ public final class PlayerStoreNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < itemList_.size(); i++) {
-        output.writeMessage(1, itemList_.get(i));
-      }
-      if (storeType_ != emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType.STORE_TYPE_NONE.getNumber()) {
-        output.writeEnum(5, storeType_);
+        output.writeMessage(3, itemList_.get(i));
       }
       if (weightLimit_ != 0) {
         output.writeUInt32(8, weightLimit_);
+      }
+      if (storeType_ != emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType.STORE_TYPE_NONE.getNumber()) {
+        output.writeEnum(10, storeType_);
       }
       unknownFields.writeTo(output);
     }
@@ -270,15 +334,15 @@ public final class PlayerStoreNotifyOuterClass {
       size = 0;
       for (int i = 0; i < itemList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, itemList_.get(i));
-      }
-      if (storeType_ != emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType.STORE_TYPE_NONE.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(5, storeType_);
+          .computeMessageSize(3, itemList_.get(i));
       }
       if (weightLimit_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(8, weightLimit_);
+      }
+      if (storeType_ != emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType.STORE_TYPE_NONE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(10, storeType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -297,9 +361,9 @@ public final class PlayerStoreNotifyOuterClass {
 
       if (!getItemListList()
           .equals(other.getItemListList())) return false;
-      if (storeType_ != other.storeType_) return false;
       if (getWeightLimit()
           != other.getWeightLimit()) return false;
+      if (storeType_ != other.storeType_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -315,10 +379,10 @@ public final class PlayerStoreNotifyOuterClass {
         hash = (37 * hash) + ITEM_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getItemListList().hashCode();
       }
-      hash = (37 * hash) + STORE_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + storeType_;
       hash = (37 * hash) + WEIGHT_LIMIT_FIELD_NUMBER;
       hash = (53 * hash) + getWeightLimit();
+      hash = (37 * hash) + STORE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + storeType_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -416,7 +480,7 @@ public final class PlayerStoreNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 7845
+     * CmdId: 424
      * </pre>
      *
      * Protobuf type {@code PlayerStoreNotify}
@@ -463,9 +527,9 @@ public final class PlayerStoreNotifyOuterClass {
         } else {
           itemListBuilder_.clear();
         }
-        storeType_ = 0;
-
         weightLimit_ = 0;
+
+        storeType_ = 0;
 
         return this;
       }
@@ -503,8 +567,8 @@ public final class PlayerStoreNotifyOuterClass {
         } else {
           result.itemList_ = itemListBuilder_.build();
         }
-        result.storeType_ = storeType_;
         result.weightLimit_ = weightLimit_;
+        result.storeType_ = storeType_;
         onBuilt();
         return result;
       }
@@ -579,11 +643,11 @@ public final class PlayerStoreNotifyOuterClass {
             }
           }
         }
-        if (other.storeType_ != 0) {
-          setStoreTypeValue(other.getStoreTypeValue());
-        }
         if (other.getWeightLimit() != 0) {
           setWeightLimit(other.getWeightLimit());
+        }
+        if (other.storeType_ != 0) {
+          setStoreTypeValue(other.getStoreTypeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -628,7 +692,11 @@ public final class PlayerStoreNotifyOuterClass {
           emu.grasscutter.net.proto.ItemOuterClass.Item, emu.grasscutter.net.proto.ItemOuterClass.Item.Builder, emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder> itemListBuilder_;
 
       /**
-       * <code>repeated .Item item_list = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .Item item_list = 3;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemOuterClass.Item> getItemListList() {
         if (itemListBuilder_ == null) {
@@ -638,7 +706,11 @@ public final class PlayerStoreNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .Item item_list = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .Item item_list = 3;</code>
        */
       public int getItemListCount() {
         if (itemListBuilder_ == null) {
@@ -648,7 +720,11 @@ public final class PlayerStoreNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .Item item_list = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .Item item_list = 3;</code>
        */
       public emu.grasscutter.net.proto.ItemOuterClass.Item getItemList(int index) {
         if (itemListBuilder_ == null) {
@@ -658,7 +734,11 @@ public final class PlayerStoreNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .Item item_list = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .Item item_list = 3;</code>
        */
       public Builder setItemList(
           int index, emu.grasscutter.net.proto.ItemOuterClass.Item value) {
@@ -675,7 +755,11 @@ public final class PlayerStoreNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Item item_list = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .Item item_list = 3;</code>
        */
       public Builder setItemList(
           int index, emu.grasscutter.net.proto.ItemOuterClass.Item.Builder builderForValue) {
@@ -689,7 +773,11 @@ public final class PlayerStoreNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Item item_list = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .Item item_list = 3;</code>
        */
       public Builder addItemList(emu.grasscutter.net.proto.ItemOuterClass.Item value) {
         if (itemListBuilder_ == null) {
@@ -705,7 +793,11 @@ public final class PlayerStoreNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Item item_list = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .Item item_list = 3;</code>
        */
       public Builder addItemList(
           int index, emu.grasscutter.net.proto.ItemOuterClass.Item value) {
@@ -722,7 +814,11 @@ public final class PlayerStoreNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Item item_list = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .Item item_list = 3;</code>
        */
       public Builder addItemList(
           emu.grasscutter.net.proto.ItemOuterClass.Item.Builder builderForValue) {
@@ -736,7 +832,11 @@ public final class PlayerStoreNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Item item_list = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .Item item_list = 3;</code>
        */
       public Builder addItemList(
           int index, emu.grasscutter.net.proto.ItemOuterClass.Item.Builder builderForValue) {
@@ -750,7 +850,11 @@ public final class PlayerStoreNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Item item_list = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .Item item_list = 3;</code>
        */
       public Builder addAllItemList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.ItemOuterClass.Item> values) {
@@ -765,7 +869,11 @@ public final class PlayerStoreNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Item item_list = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .Item item_list = 3;</code>
        */
       public Builder clearItemList() {
         if (itemListBuilder_ == null) {
@@ -778,7 +886,11 @@ public final class PlayerStoreNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Item item_list = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .Item item_list = 3;</code>
        */
       public Builder removeItemList(int index) {
         if (itemListBuilder_ == null) {
@@ -791,14 +903,22 @@ public final class PlayerStoreNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Item item_list = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .Item item_list = 3;</code>
        */
       public emu.grasscutter.net.proto.ItemOuterClass.Item.Builder getItemListBuilder(
           int index) {
         return getItemListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Item item_list = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .Item item_list = 3;</code>
        */
       public emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder getItemListOrBuilder(
           int index) {
@@ -808,7 +928,11 @@ public final class PlayerStoreNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .Item item_list = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .Item item_list = 3;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.ItemOuterClass.ItemOrBuilder> 
            getItemListOrBuilderList() {
@@ -819,14 +943,22 @@ public final class PlayerStoreNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .Item item_list = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .Item item_list = 3;</code>
        */
       public emu.grasscutter.net.proto.ItemOuterClass.Item.Builder addItemListBuilder() {
         return getItemListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.ItemOuterClass.Item.getDefaultInstance());
       }
       /**
-       * <code>repeated .Item item_list = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .Item item_list = 3;</code>
        */
       public emu.grasscutter.net.proto.ItemOuterClass.Item.Builder addItemListBuilder(
           int index) {
@@ -834,7 +966,11 @@ public final class PlayerStoreNotifyOuterClass {
             index, emu.grasscutter.net.proto.ItemOuterClass.Item.getDefaultInstance());
       }
       /**
-       * <code>repeated .Item item_list = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .Item item_list = 3;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemOuterClass.Item.Builder> 
            getItemListBuilderList() {
@@ -855,16 +991,67 @@ public final class PlayerStoreNotifyOuterClass {
         return itemListBuilder_;
       }
 
+      private int weightLimit_ ;
+      /**
+       * <pre>
+       * Offset: 0x28
+       * </pre>
+       *
+       * <code>uint32 weight_limit = 8;</code>
+       * @return The weightLimit.
+       */
+      @java.lang.Override
+      public int getWeightLimit() {
+        return weightLimit_;
+      }
+      /**
+       * <pre>
+       * Offset: 0x28
+       * </pre>
+       *
+       * <code>uint32 weight_limit = 8;</code>
+       * @param value The weightLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWeightLimit(int value) {
+        
+        weightLimit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset: 0x28
+       * </pre>
+       *
+       * <code>uint32 weight_limit = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWeightLimit() {
+        
+        weightLimit_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int storeType_ = 0;
       /**
-       * <code>.StoreType store_type = 5;</code>
+       * <pre>
+       * Offset: 0x2C
+       * </pre>
+       *
+       * <code>.StoreType store_type = 10;</code>
        * @return The enum numeric value on the wire for storeType.
        */
       @java.lang.Override public int getStoreTypeValue() {
         return storeType_;
       }
       /**
-       * <code>.StoreType store_type = 5;</code>
+       * <pre>
+       * Offset: 0x2C
+       * </pre>
+       *
+       * <code>.StoreType store_type = 10;</code>
        * @param value The enum numeric value on the wire for storeType to set.
        * @return This builder for chaining.
        */
@@ -875,7 +1062,11 @@ public final class PlayerStoreNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.StoreType store_type = 5;</code>
+       * <pre>
+       * Offset: 0x2C
+       * </pre>
+       *
+       * <code>.StoreType store_type = 10;</code>
        * @return The storeType.
        */
       @java.lang.Override
@@ -885,7 +1076,11 @@ public final class PlayerStoreNotifyOuterClass {
         return result == null ? emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.StoreType store_type = 5;</code>
+       * <pre>
+       * Offset: 0x2C
+       * </pre>
+       *
+       * <code>.StoreType store_type = 10;</code>
        * @param value The storeType to set.
        * @return This builder for chaining.
        */
@@ -899,43 +1094,16 @@ public final class PlayerStoreNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.StoreType store_type = 5;</code>
+       * <pre>
+       * Offset: 0x2C
+       * </pre>
+       *
+       * <code>.StoreType store_type = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearStoreType() {
         
         storeType_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int weightLimit_ ;
-      /**
-       * <code>uint32 weight_limit = 8;</code>
-       * @return The weightLimit.
-       */
-      @java.lang.Override
-      public int getWeightLimit() {
-        return weightLimit_;
-      }
-      /**
-       * <code>uint32 weight_limit = 8;</code>
-       * @param value The weightLimit to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWeightLimit(int value) {
-        
-        weightLimit_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 weight_limit = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearWeightLimit() {
-        
-        weightLimit_ = 0;
         onChanged();
         return this;
       }
@@ -1008,8 +1176,8 @@ public final class PlayerStoreNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\027PlayerStoreNotify.proto\032\017StoreType.pro" +
       "to\032\nItem.proto\"c\n\021PlayerStoreNotify\022\030\n\ti" +
-      "tem_list\030\001 \003(\0132\005.Item\022\036\n\nstore_type\030\005 \001(" +
-      "\0162\n.StoreType\022\024\n\014weight_limit\030\010 \001(\rB\033\n\031e" +
+      "tem_list\030\003 \003(\0132\005.Item\022\024\n\014weight_limit\030\010 " +
+      "\001(\r\022\036\n\nstore_type\030\n \001(\0162\n.StoreTypeB\033\n\031e" +
       "mu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -1023,7 +1191,7 @@ public final class PlayerStoreNotifyOuterClass {
     internal_static_PlayerStoreNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerStoreNotify_descriptor,
-        new java.lang.String[] { "ItemList", "StoreType", "WeightLimit", });
+        new java.lang.String[] { "ItemList", "WeightLimit", "StoreType", });
     emu.grasscutter.net.proto.StoreTypeOuterClass.getDescriptor();
     emu.grasscutter.net.proto.ItemOuterClass.getDescriptor();
   }

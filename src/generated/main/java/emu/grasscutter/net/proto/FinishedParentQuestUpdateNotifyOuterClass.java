@@ -19,32 +19,52 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>repeated .ParentQuest parent_quest_list = 12;</code>
      */
     java.util.List<emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest> 
         getParentQuestListList();
     /**
-     * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>repeated .ParentQuest parent_quest_list = 12;</code>
      */
     emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest getParentQuestList(int index);
     /**
-     * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>repeated .ParentQuest parent_quest_list = 12;</code>
      */
     int getParentQuestListCount();
     /**
-     * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>repeated .ParentQuest parent_quest_list = 12;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuestOrBuilder> 
         getParentQuestListOrBuilderList();
     /**
-     * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>repeated .ParentQuest parent_quest_list = 12;</code>
      */
     emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuestOrBuilder getParentQuestListOrBuilder(
         int index);
   }
   /**
    * <pre>
-   * CmdId: 28362
+   * CmdId: 5859
    * </pre>
    *
    * Protobuf type {@code FinishedParentQuestUpdateNotify}
@@ -93,7 +113,7 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 90: {
+            case 98: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 parentQuestList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest>();
                 mutable_bitField0_ |= 0x00000001;
@@ -137,17 +157,25 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
               emu.grasscutter.net.proto.FinishedParentQuestUpdateNotifyOuterClass.FinishedParentQuestUpdateNotify.class, emu.grasscutter.net.proto.FinishedParentQuestUpdateNotifyOuterClass.FinishedParentQuestUpdateNotify.Builder.class);
     }
 
-    public static final int PARENT_QUEST_LIST_FIELD_NUMBER = 11;
+    public static final int PARENT_QUEST_LIST_FIELD_NUMBER = 12;
     private java.util.List<emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest> parentQuestList_;
     /**
-     * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>repeated .ParentQuest parent_quest_list = 12;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest> getParentQuestListList() {
       return parentQuestList_;
     }
     /**
-     * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>repeated .ParentQuest parent_quest_list = 12;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuestOrBuilder> 
@@ -155,21 +183,33 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
       return parentQuestList_;
     }
     /**
-     * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>repeated .ParentQuest parent_quest_list = 12;</code>
      */
     @java.lang.Override
     public int getParentQuestListCount() {
       return parentQuestList_.size();
     }
     /**
-     * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>repeated .ParentQuest parent_quest_list = 12;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest getParentQuestList(int index) {
       return parentQuestList_.get(index);
     }
     /**
-     * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>repeated .ParentQuest parent_quest_list = 12;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuestOrBuilder getParentQuestListOrBuilder(
@@ -192,7 +232,7 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < parentQuestList_.size(); i++) {
-        output.writeMessage(11, parentQuestList_.get(i));
+        output.writeMessage(12, parentQuestList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -205,7 +245,7 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
       size = 0;
       for (int i = 0; i < parentQuestList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, parentQuestList_.get(i));
+          .computeMessageSize(12, parentQuestList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -336,7 +376,7 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 28362
+     * CmdId: 5859
      * </pre>
      *
      * Protobuf type {@code FinishedParentQuestUpdateNotify}
@@ -536,7 +576,11 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
           emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest, emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest.Builder, emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuestOrBuilder> parentQuestListBuilder_;
 
       /**
-       * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .ParentQuest parent_quest_list = 12;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest> getParentQuestListList() {
         if (parentQuestListBuilder_ == null) {
@@ -546,7 +590,11 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .ParentQuest parent_quest_list = 12;</code>
        */
       public int getParentQuestListCount() {
         if (parentQuestListBuilder_ == null) {
@@ -556,7 +604,11 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .ParentQuest parent_quest_list = 12;</code>
        */
       public emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest getParentQuestList(int index) {
         if (parentQuestListBuilder_ == null) {
@@ -566,7 +618,11 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .ParentQuest parent_quest_list = 12;</code>
        */
       public Builder setParentQuestList(
           int index, emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest value) {
@@ -583,7 +639,11 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .ParentQuest parent_quest_list = 12;</code>
        */
       public Builder setParentQuestList(
           int index, emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest.Builder builderForValue) {
@@ -597,7 +657,11 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .ParentQuest parent_quest_list = 12;</code>
        */
       public Builder addParentQuestList(emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest value) {
         if (parentQuestListBuilder_ == null) {
@@ -613,7 +677,11 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .ParentQuest parent_quest_list = 12;</code>
        */
       public Builder addParentQuestList(
           int index, emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest value) {
@@ -630,7 +698,11 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .ParentQuest parent_quest_list = 12;</code>
        */
       public Builder addParentQuestList(
           emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest.Builder builderForValue) {
@@ -644,7 +716,11 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .ParentQuest parent_quest_list = 12;</code>
        */
       public Builder addParentQuestList(
           int index, emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest.Builder builderForValue) {
@@ -658,7 +734,11 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .ParentQuest parent_quest_list = 12;</code>
        */
       public Builder addAllParentQuestList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest> values) {
@@ -673,7 +753,11 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .ParentQuest parent_quest_list = 12;</code>
        */
       public Builder clearParentQuestList() {
         if (parentQuestListBuilder_ == null) {
@@ -686,7 +770,11 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .ParentQuest parent_quest_list = 12;</code>
        */
       public Builder removeParentQuestList(int index) {
         if (parentQuestListBuilder_ == null) {
@@ -699,14 +787,22 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .ParentQuest parent_quest_list = 12;</code>
        */
       public emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest.Builder getParentQuestListBuilder(
           int index) {
         return getParentQuestListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .ParentQuest parent_quest_list = 12;</code>
        */
       public emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuestOrBuilder getParentQuestListOrBuilder(
           int index) {
@@ -716,7 +812,11 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .ParentQuest parent_quest_list = 12;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuestOrBuilder> 
            getParentQuestListOrBuilderList() {
@@ -727,14 +827,22 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .ParentQuest parent_quest_list = 12;</code>
        */
       public emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest.Builder addParentQuestListBuilder() {
         return getParentQuestListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest.getDefaultInstance());
       }
       /**
-       * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .ParentQuest parent_quest_list = 12;</code>
        */
       public emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest.Builder addParentQuestListBuilder(
           int index) {
@@ -742,7 +850,11 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
             index, emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest.getDefaultInstance());
       }
       /**
-       * <code>repeated .ParentQuest parent_quest_list = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>repeated .ParentQuest parent_quest_list = 12;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ParentQuestOuterClass.ParentQuest.Builder> 
            getParentQuestListBuilderList() {
@@ -831,7 +943,7 @@ public final class FinishedParentQuestUpdateNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n%FinishedParentQuestUpdateNotify.proto\032" +
       "\021ParentQuest.proto\"J\n\037FinishedParentQues" +
-      "tUpdateNotify\022\'\n\021parent_quest_list\030\013 \003(\013" +
+      "tUpdateNotify\022\'\n\021parent_quest_list\030\014 \003(\013" +
       "2\014.ParentQuestB\033\n\031emu.grasscutter.net.pr" +
       "otob\006proto3"
     };

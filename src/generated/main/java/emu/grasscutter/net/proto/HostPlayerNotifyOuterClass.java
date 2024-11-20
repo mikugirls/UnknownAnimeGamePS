@@ -19,20 +19,28 @@ public final class HostPlayerNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 host_uid = 1;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>uint32 host_uid = 6;</code>
      * @return The hostUid.
      */
     int getHostUid();
 
     /**
-     * <code>uint32 host_peer_id = 9;</code>
+     * <pre>
+     * Offset: 0x24
+     * </pre>
+     *
+     * <code>uint32 host_peer_id = 10;</code>
      * @return The hostPeerId.
      */
     int getHostPeerId();
   }
   /**
    * <pre>
-   * CmdId: 2109
+   * CmdId: 5855
    * </pre>
    *
    * Protobuf type {@code HostPlayerNotify}
@@ -79,12 +87,12 @@ public final class HostPlayerNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 48: {
 
               hostUid_ = input.readUInt32();
               break;
             }
-            case 72: {
+            case 80: {
 
               hostPeerId_ = input.readUInt32();
               break;
@@ -121,10 +129,14 @@ public final class HostPlayerNotifyOuterClass {
               emu.grasscutter.net.proto.HostPlayerNotifyOuterClass.HostPlayerNotify.class, emu.grasscutter.net.proto.HostPlayerNotifyOuterClass.HostPlayerNotify.Builder.class);
     }
 
-    public static final int HOST_UID_FIELD_NUMBER = 1;
+    public static final int HOST_UID_FIELD_NUMBER = 6;
     private int hostUid_;
     /**
-     * <code>uint32 host_uid = 1;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>uint32 host_uid = 6;</code>
      * @return The hostUid.
      */
     @java.lang.Override
@@ -132,10 +144,14 @@ public final class HostPlayerNotifyOuterClass {
       return hostUid_;
     }
 
-    public static final int HOST_PEER_ID_FIELD_NUMBER = 9;
+    public static final int HOST_PEER_ID_FIELD_NUMBER = 10;
     private int hostPeerId_;
     /**
-     * <code>uint32 host_peer_id = 9;</code>
+     * <pre>
+     * Offset: 0x24
+     * </pre>
+     *
+     * <code>uint32 host_peer_id = 10;</code>
      * @return The hostPeerId.
      */
     @java.lang.Override
@@ -158,10 +174,10 @@ public final class HostPlayerNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (hostUid_ != 0) {
-        output.writeUInt32(1, hostUid_);
+        output.writeUInt32(6, hostUid_);
       }
       if (hostPeerId_ != 0) {
-        output.writeUInt32(9, hostPeerId_);
+        output.writeUInt32(10, hostPeerId_);
       }
       unknownFields.writeTo(output);
     }
@@ -174,11 +190,11 @@ public final class HostPlayerNotifyOuterClass {
       size = 0;
       if (hostUid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, hostUid_);
+          .computeUInt32Size(6, hostUid_);
       }
       if (hostPeerId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, hostPeerId_);
+          .computeUInt32Size(10, hostPeerId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -311,7 +327,7 @@ public final class HostPlayerNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 2109
+     * CmdId: 5855
      * </pre>
      *
      * Protobuf type {@code HostPlayerNotify}
@@ -468,7 +484,11 @@ public final class HostPlayerNotifyOuterClass {
 
       private int hostUid_ ;
       /**
-       * <code>uint32 host_uid = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>uint32 host_uid = 6;</code>
        * @return The hostUid.
        */
       @java.lang.Override
@@ -476,7 +496,11 @@ public final class HostPlayerNotifyOuterClass {
         return hostUid_;
       }
       /**
-       * <code>uint32 host_uid = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>uint32 host_uid = 6;</code>
        * @param value The hostUid to set.
        * @return This builder for chaining.
        */
@@ -487,7 +511,11 @@ public final class HostPlayerNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 host_uid = 1;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>uint32 host_uid = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearHostUid() {
@@ -499,7 +527,11 @@ public final class HostPlayerNotifyOuterClass {
 
       private int hostPeerId_ ;
       /**
-       * <code>uint32 host_peer_id = 9;</code>
+       * <pre>
+       * Offset: 0x24
+       * </pre>
+       *
+       * <code>uint32 host_peer_id = 10;</code>
        * @return The hostPeerId.
        */
       @java.lang.Override
@@ -507,7 +539,11 @@ public final class HostPlayerNotifyOuterClass {
         return hostPeerId_;
       }
       /**
-       * <code>uint32 host_peer_id = 9;</code>
+       * <pre>
+       * Offset: 0x24
+       * </pre>
+       *
+       * <code>uint32 host_peer_id = 10;</code>
        * @param value The hostPeerId to set.
        * @return This builder for chaining.
        */
@@ -518,7 +554,11 @@ public final class HostPlayerNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 host_peer_id = 9;</code>
+       * <pre>
+       * Offset: 0x24
+       * </pre>
+       *
+       * <code>uint32 host_peer_id = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearHostPeerId() {
@@ -595,7 +635,7 @@ public final class HostPlayerNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026HostPlayerNotify.proto\":\n\020HostPlayerNo" +
-      "tify\022\020\n\010host_uid\030\001 \001(\r\022\024\n\014host_peer_id\030\t" +
+      "tify\022\020\n\010host_uid\030\006 \001(\r\022\024\n\014host_peer_id\030\n" +
       " \001(\rB\033\n\031emu.grasscutter.net.protob\006proto" +
       "3"
     };

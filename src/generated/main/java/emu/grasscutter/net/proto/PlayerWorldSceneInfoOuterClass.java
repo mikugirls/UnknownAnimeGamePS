@@ -19,48 +19,80 @@ public final class PlayerWorldSceneInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 scene_tag_id_list = 5;</code>
+     * <pre>
+     * Offset: 0x28
+     * </pre>
+     *
+     * <code>repeated uint32 scene_tag_id_list = 6;</code>
      * @return A list containing the sceneTagIdList.
      */
     java.util.List<java.lang.Integer> getSceneTagIdListList();
     /**
-     * <code>repeated uint32 scene_tag_id_list = 5;</code>
+     * <pre>
+     * Offset: 0x28
+     * </pre>
+     *
+     * <code>repeated uint32 scene_tag_id_list = 6;</code>
      * @return The count of sceneTagIdList.
      */
     int getSceneTagIdListCount();
     /**
-     * <code>repeated uint32 scene_tag_id_list = 5;</code>
+     * <pre>
+     * Offset: 0x28
+     * </pre>
+     *
+     * <code>repeated uint32 scene_tag_id_list = 6;</code>
      * @param index The index of the element to return.
      * @return The sceneTagIdList at the given index.
      */
     int getSceneTagIdList(int index);
 
     /**
-     * <code>bool is_locked = 10;</code>
-     * @return The isLocked.
-     */
-    boolean getIsLocked();
-
-    /**
-     * <code>uint32 scene_id = 11;</code>
-     * @return The sceneId.
-     */
-    int getSceneId();
-
-    /**
+     * <pre>
+     * Offset: 0x30
+     * </pre>
+     *
      * <code>.MapLayerInfo map_layer_info = 14;</code>
      * @return Whether the mapLayerInfo field is set.
      */
     boolean hasMapLayerInfo();
     /**
+     * <pre>
+     * Offset: 0x30
+     * </pre>
+     *
      * <code>.MapLayerInfo map_layer_info = 14;</code>
      * @return The mapLayerInfo.
      */
     emu.grasscutter.net.proto.MapLayerInfoOuterClass.MapLayerInfo getMapLayerInfo();
     /**
+     * <pre>
+     * Offset: 0x30
+     * </pre>
+     *
      * <code>.MapLayerInfo map_layer_info = 14;</code>
      */
     emu.grasscutter.net.proto.MapLayerInfoOuterClass.MapLayerInfoOrBuilder getMapLayerInfoOrBuilder();
+
+    /**
+     * <pre>
+     * Offset: 0x38
+     * </pre>
+     *
+     * <code>uint32 scene_id = 8;</code>
+     * @return The sceneId.
+     */
+    int getSceneId();
+
+    /**
+     * <pre>
+     * Offset: 0x3C
+     * </pre>
+     *
+     * <code>bool is_locked = 15;</code>
+     * @return The isLocked.
+     */
+    boolean getIsLocked();
   }
   /**
    * Protobuf type {@code PlayerWorldSceneInfo}
@@ -109,7 +141,7 @@ public final class PlayerWorldSceneInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 40: {
+            case 48: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 sceneTagIdList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -117,7 +149,7 @@ public final class PlayerWorldSceneInfoOuterClass {
               sceneTagIdList_.addInt(input.readUInt32());
               break;
             }
-            case 42: {
+            case 50: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -130,12 +162,7 @@ public final class PlayerWorldSceneInfoOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 80: {
-
-              isLocked_ = input.readBool();
-              break;
-            }
-            case 88: {
+            case 64: {
 
               sceneId_ = input.readUInt32();
               break;
@@ -151,6 +178,11 @@ public final class PlayerWorldSceneInfoOuterClass {
                 mapLayerInfo_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 120: {
+
+              isLocked_ = input.readBool();
               break;
             }
             default: {
@@ -188,10 +220,14 @@ public final class PlayerWorldSceneInfoOuterClass {
               emu.grasscutter.net.proto.PlayerWorldSceneInfoOuterClass.PlayerWorldSceneInfo.class, emu.grasscutter.net.proto.PlayerWorldSceneInfoOuterClass.PlayerWorldSceneInfo.Builder.class);
     }
 
-    public static final int SCENE_TAG_ID_LIST_FIELD_NUMBER = 5;
+    public static final int SCENE_TAG_ID_LIST_FIELD_NUMBER = 6;
     private com.google.protobuf.Internal.IntList sceneTagIdList_;
     /**
-     * <code>repeated uint32 scene_tag_id_list = 5;</code>
+     * <pre>
+     * Offset: 0x28
+     * </pre>
+     *
+     * <code>repeated uint32 scene_tag_id_list = 6;</code>
      * @return A list containing the sceneTagIdList.
      */
     @java.lang.Override
@@ -200,14 +236,22 @@ public final class PlayerWorldSceneInfoOuterClass {
       return sceneTagIdList_;
     }
     /**
-     * <code>repeated uint32 scene_tag_id_list = 5;</code>
+     * <pre>
+     * Offset: 0x28
+     * </pre>
+     *
+     * <code>repeated uint32 scene_tag_id_list = 6;</code>
      * @return The count of sceneTagIdList.
      */
     public int getSceneTagIdListCount() {
       return sceneTagIdList_.size();
     }
     /**
-     * <code>repeated uint32 scene_tag_id_list = 5;</code>
+     * <pre>
+     * Offset: 0x28
+     * </pre>
+     *
+     * <code>repeated uint32 scene_tag_id_list = 6;</code>
      * @param index The index of the element to return.
      * @return The sceneTagIdList at the given index.
      */
@@ -216,31 +260,13 @@ public final class PlayerWorldSceneInfoOuterClass {
     }
     private int sceneTagIdListMemoizedSerializedSize = -1;
 
-    public static final int IS_LOCKED_FIELD_NUMBER = 10;
-    private boolean isLocked_;
-    /**
-     * <code>bool is_locked = 10;</code>
-     * @return The isLocked.
-     */
-    @java.lang.Override
-    public boolean getIsLocked() {
-      return isLocked_;
-    }
-
-    public static final int SCENE_ID_FIELD_NUMBER = 11;
-    private int sceneId_;
-    /**
-     * <code>uint32 scene_id = 11;</code>
-     * @return The sceneId.
-     */
-    @java.lang.Override
-    public int getSceneId() {
-      return sceneId_;
-    }
-
     public static final int MAP_LAYER_INFO_FIELD_NUMBER = 14;
     private emu.grasscutter.net.proto.MapLayerInfoOuterClass.MapLayerInfo mapLayerInfo_;
     /**
+     * <pre>
+     * Offset: 0x30
+     * </pre>
+     *
      * <code>.MapLayerInfo map_layer_info = 14;</code>
      * @return Whether the mapLayerInfo field is set.
      */
@@ -249,6 +275,10 @@ public final class PlayerWorldSceneInfoOuterClass {
       return mapLayerInfo_ != null;
     }
     /**
+     * <pre>
+     * Offset: 0x30
+     * </pre>
+     *
      * <code>.MapLayerInfo map_layer_info = 14;</code>
      * @return The mapLayerInfo.
      */
@@ -257,11 +287,45 @@ public final class PlayerWorldSceneInfoOuterClass {
       return mapLayerInfo_ == null ? emu.grasscutter.net.proto.MapLayerInfoOuterClass.MapLayerInfo.getDefaultInstance() : mapLayerInfo_;
     }
     /**
+     * <pre>
+     * Offset: 0x30
+     * </pre>
+     *
      * <code>.MapLayerInfo map_layer_info = 14;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.MapLayerInfoOuterClass.MapLayerInfoOrBuilder getMapLayerInfoOrBuilder() {
       return getMapLayerInfo();
+    }
+
+    public static final int SCENE_ID_FIELD_NUMBER = 8;
+    private int sceneId_;
+    /**
+     * <pre>
+     * Offset: 0x38
+     * </pre>
+     *
+     * <code>uint32 scene_id = 8;</code>
+     * @return The sceneId.
+     */
+    @java.lang.Override
+    public int getSceneId() {
+      return sceneId_;
+    }
+
+    public static final int IS_LOCKED_FIELD_NUMBER = 15;
+    private boolean isLocked_;
+    /**
+     * <pre>
+     * Offset: 0x3C
+     * </pre>
+     *
+     * <code>bool is_locked = 15;</code>
+     * @return The isLocked.
+     */
+    @java.lang.Override
+    public boolean getIsLocked() {
+      return isLocked_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -280,20 +344,20 @@ public final class PlayerWorldSceneInfoOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (getSceneTagIdListList().size() > 0) {
-        output.writeUInt32NoTag(42);
+        output.writeUInt32NoTag(50);
         output.writeUInt32NoTag(sceneTagIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < sceneTagIdList_.size(); i++) {
         output.writeUInt32NoTag(sceneTagIdList_.getInt(i));
       }
-      if (isLocked_ != false) {
-        output.writeBool(10, isLocked_);
-      }
       if (sceneId_ != 0) {
-        output.writeUInt32(11, sceneId_);
+        output.writeUInt32(8, sceneId_);
       }
       if (mapLayerInfo_ != null) {
         output.writeMessage(14, getMapLayerInfo());
+      }
+      if (isLocked_ != false) {
+        output.writeBool(15, isLocked_);
       }
       unknownFields.writeTo(output);
     }
@@ -318,17 +382,17 @@ public final class PlayerWorldSceneInfoOuterClass {
         }
         sceneTagIdListMemoizedSerializedSize = dataSize;
       }
-      if (isLocked_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(10, isLocked_);
-      }
       if (sceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, sceneId_);
+          .computeUInt32Size(8, sceneId_);
       }
       if (mapLayerInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getMapLayerInfo());
+      }
+      if (isLocked_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(15, isLocked_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -347,15 +411,15 @@ public final class PlayerWorldSceneInfoOuterClass {
 
       if (!getSceneTagIdListList()
           .equals(other.getSceneTagIdListList())) return false;
-      if (getIsLocked()
-          != other.getIsLocked()) return false;
-      if (getSceneId()
-          != other.getSceneId()) return false;
       if (hasMapLayerInfo() != other.hasMapLayerInfo()) return false;
       if (hasMapLayerInfo()) {
         if (!getMapLayerInfo()
             .equals(other.getMapLayerInfo())) return false;
       }
+      if (getSceneId()
+          != other.getSceneId()) return false;
+      if (getIsLocked()
+          != other.getIsLocked()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -371,15 +435,15 @@ public final class PlayerWorldSceneInfoOuterClass {
         hash = (37 * hash) + SCENE_TAG_ID_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getSceneTagIdListList().hashCode();
       }
-      hash = (37 * hash) + IS_LOCKED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsLocked());
-      hash = (37 * hash) + SCENE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getSceneId();
       if (hasMapLayerInfo()) {
         hash = (37 * hash) + MAP_LAYER_INFO_FIELD_NUMBER;
         hash = (53 * hash) + getMapLayerInfo().hashCode();
       }
+      hash = (37 * hash) + SCENE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSceneId();
+      hash = (37 * hash) + IS_LOCKED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsLocked());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -515,16 +579,16 @@ public final class PlayerWorldSceneInfoOuterClass {
         super.clear();
         sceneTagIdList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
-        isLocked_ = false;
-
-        sceneId_ = 0;
-
         if (mapLayerInfoBuilder_ == null) {
           mapLayerInfo_ = null;
         } else {
           mapLayerInfo_ = null;
           mapLayerInfoBuilder_ = null;
         }
+        sceneId_ = 0;
+
+        isLocked_ = false;
+
         return this;
       }
 
@@ -557,13 +621,13 @@ public final class PlayerWorldSceneInfoOuterClass {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.sceneTagIdList_ = sceneTagIdList_;
-        result.isLocked_ = isLocked_;
-        result.sceneId_ = sceneId_;
         if (mapLayerInfoBuilder_ == null) {
           result.mapLayerInfo_ = mapLayerInfo_;
         } else {
           result.mapLayerInfo_ = mapLayerInfoBuilder_.build();
         }
+        result.sceneId_ = sceneId_;
+        result.isLocked_ = isLocked_;
         onBuilt();
         return result;
       }
@@ -622,14 +686,14 @@ public final class PlayerWorldSceneInfoOuterClass {
           }
           onChanged();
         }
-        if (other.getIsLocked() != false) {
-          setIsLocked(other.getIsLocked());
+        if (other.hasMapLayerInfo()) {
+          mergeMapLayerInfo(other.getMapLayerInfo());
         }
         if (other.getSceneId() != 0) {
           setSceneId(other.getSceneId());
         }
-        if (other.hasMapLayerInfo()) {
-          mergeMapLayerInfo(other.getMapLayerInfo());
+        if (other.getIsLocked() != false) {
+          setIsLocked(other.getIsLocked());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -669,7 +733,11 @@ public final class PlayerWorldSceneInfoOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 scene_tag_id_list = 5;</code>
+       * <pre>
+       * Offset: 0x28
+       * </pre>
+       *
+       * <code>repeated uint32 scene_tag_id_list = 6;</code>
        * @return A list containing the sceneTagIdList.
        */
       public java.util.List<java.lang.Integer>
@@ -678,14 +746,22 @@ public final class PlayerWorldSceneInfoOuterClass {
                  java.util.Collections.unmodifiableList(sceneTagIdList_) : sceneTagIdList_;
       }
       /**
-       * <code>repeated uint32 scene_tag_id_list = 5;</code>
+       * <pre>
+       * Offset: 0x28
+       * </pre>
+       *
+       * <code>repeated uint32 scene_tag_id_list = 6;</code>
        * @return The count of sceneTagIdList.
        */
       public int getSceneTagIdListCount() {
         return sceneTagIdList_.size();
       }
       /**
-       * <code>repeated uint32 scene_tag_id_list = 5;</code>
+       * <pre>
+       * Offset: 0x28
+       * </pre>
+       *
+       * <code>repeated uint32 scene_tag_id_list = 6;</code>
        * @param index The index of the element to return.
        * @return The sceneTagIdList at the given index.
        */
@@ -693,7 +769,11 @@ public final class PlayerWorldSceneInfoOuterClass {
         return sceneTagIdList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 scene_tag_id_list = 5;</code>
+       * <pre>
+       * Offset: 0x28
+       * </pre>
+       *
+       * <code>repeated uint32 scene_tag_id_list = 6;</code>
        * @param index The index to set the value at.
        * @param value The sceneTagIdList to set.
        * @return This builder for chaining.
@@ -706,7 +786,11 @@ public final class PlayerWorldSceneInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 scene_tag_id_list = 5;</code>
+       * <pre>
+       * Offset: 0x28
+       * </pre>
+       *
+       * <code>repeated uint32 scene_tag_id_list = 6;</code>
        * @param value The sceneTagIdList to add.
        * @return This builder for chaining.
        */
@@ -717,7 +801,11 @@ public final class PlayerWorldSceneInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 scene_tag_id_list = 5;</code>
+       * <pre>
+       * Offset: 0x28
+       * </pre>
+       *
+       * <code>repeated uint32 scene_tag_id_list = 6;</code>
        * @param values The sceneTagIdList to add.
        * @return This builder for chaining.
        */
@@ -730,7 +818,11 @@ public final class PlayerWorldSceneInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 scene_tag_id_list = 5;</code>
+       * <pre>
+       * Offset: 0x28
+       * </pre>
+       *
+       * <code>repeated uint32 scene_tag_id_list = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearSceneTagIdList() {
@@ -740,72 +832,14 @@ public final class PlayerWorldSceneInfoOuterClass {
         return this;
       }
 
-      private boolean isLocked_ ;
-      /**
-       * <code>bool is_locked = 10;</code>
-       * @return The isLocked.
-       */
-      @java.lang.Override
-      public boolean getIsLocked() {
-        return isLocked_;
-      }
-      /**
-       * <code>bool is_locked = 10;</code>
-       * @param value The isLocked to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsLocked(boolean value) {
-        
-        isLocked_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_locked = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsLocked() {
-        
-        isLocked_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int sceneId_ ;
-      /**
-       * <code>uint32 scene_id = 11;</code>
-       * @return The sceneId.
-       */
-      @java.lang.Override
-      public int getSceneId() {
-        return sceneId_;
-      }
-      /**
-       * <code>uint32 scene_id = 11;</code>
-       * @param value The sceneId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSceneId(int value) {
-        
-        sceneId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 scene_id = 11;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSceneId() {
-        
-        sceneId_ = 0;
-        onChanged();
-        return this;
-      }
-
       private emu.grasscutter.net.proto.MapLayerInfoOuterClass.MapLayerInfo mapLayerInfo_;
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.MapLayerInfoOuterClass.MapLayerInfo, emu.grasscutter.net.proto.MapLayerInfoOuterClass.MapLayerInfo.Builder, emu.grasscutter.net.proto.MapLayerInfoOuterClass.MapLayerInfoOrBuilder> mapLayerInfoBuilder_;
       /**
+       * <pre>
+       * Offset: 0x30
+       * </pre>
+       *
        * <code>.MapLayerInfo map_layer_info = 14;</code>
        * @return Whether the mapLayerInfo field is set.
        */
@@ -813,6 +847,10 @@ public final class PlayerWorldSceneInfoOuterClass {
         return mapLayerInfoBuilder_ != null || mapLayerInfo_ != null;
       }
       /**
+       * <pre>
+       * Offset: 0x30
+       * </pre>
+       *
        * <code>.MapLayerInfo map_layer_info = 14;</code>
        * @return The mapLayerInfo.
        */
@@ -824,6 +862,10 @@ public final class PlayerWorldSceneInfoOuterClass {
         }
       }
       /**
+       * <pre>
+       * Offset: 0x30
+       * </pre>
+       *
        * <code>.MapLayerInfo map_layer_info = 14;</code>
        */
       public Builder setMapLayerInfo(emu.grasscutter.net.proto.MapLayerInfoOuterClass.MapLayerInfo value) {
@@ -840,6 +882,10 @@ public final class PlayerWorldSceneInfoOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Offset: 0x30
+       * </pre>
+       *
        * <code>.MapLayerInfo map_layer_info = 14;</code>
        */
       public Builder setMapLayerInfo(
@@ -854,6 +900,10 @@ public final class PlayerWorldSceneInfoOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Offset: 0x30
+       * </pre>
+       *
        * <code>.MapLayerInfo map_layer_info = 14;</code>
        */
       public Builder mergeMapLayerInfo(emu.grasscutter.net.proto.MapLayerInfoOuterClass.MapLayerInfo value) {
@@ -872,6 +922,10 @@ public final class PlayerWorldSceneInfoOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Offset: 0x30
+       * </pre>
+       *
        * <code>.MapLayerInfo map_layer_info = 14;</code>
        */
       public Builder clearMapLayerInfo() {
@@ -886,6 +940,10 @@ public final class PlayerWorldSceneInfoOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Offset: 0x30
+       * </pre>
+       *
        * <code>.MapLayerInfo map_layer_info = 14;</code>
        */
       public emu.grasscutter.net.proto.MapLayerInfoOuterClass.MapLayerInfo.Builder getMapLayerInfoBuilder() {
@@ -894,6 +952,10 @@ public final class PlayerWorldSceneInfoOuterClass {
         return getMapLayerInfoFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Offset: 0x30
+       * </pre>
+       *
        * <code>.MapLayerInfo map_layer_info = 14;</code>
        */
       public emu.grasscutter.net.proto.MapLayerInfoOuterClass.MapLayerInfoOrBuilder getMapLayerInfoOrBuilder() {
@@ -905,6 +967,10 @@ public final class PlayerWorldSceneInfoOuterClass {
         }
       }
       /**
+       * <pre>
+       * Offset: 0x30
+       * </pre>
+       *
        * <code>.MapLayerInfo map_layer_info = 14;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -919,6 +985,92 @@ public final class PlayerWorldSceneInfoOuterClass {
           mapLayerInfo_ = null;
         }
         return mapLayerInfoBuilder_;
+      }
+
+      private int sceneId_ ;
+      /**
+       * <pre>
+       * Offset: 0x38
+       * </pre>
+       *
+       * <code>uint32 scene_id = 8;</code>
+       * @return The sceneId.
+       */
+      @java.lang.Override
+      public int getSceneId() {
+        return sceneId_;
+      }
+      /**
+       * <pre>
+       * Offset: 0x38
+       * </pre>
+       *
+       * <code>uint32 scene_id = 8;</code>
+       * @param value The sceneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSceneId(int value) {
+        
+        sceneId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset: 0x38
+       * </pre>
+       *
+       * <code>uint32 scene_id = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSceneId() {
+        
+        sceneId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isLocked_ ;
+      /**
+       * <pre>
+       * Offset: 0x3C
+       * </pre>
+       *
+       * <code>bool is_locked = 15;</code>
+       * @return The isLocked.
+       */
+      @java.lang.Override
+      public boolean getIsLocked() {
+        return isLocked_;
+      }
+      /**
+       * <pre>
+       * Offset: 0x3C
+       * </pre>
+       *
+       * <code>bool is_locked = 15;</code>
+       * @param value The isLocked to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsLocked(boolean value) {
+        
+        isLocked_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset: 0x3C
+       * </pre>
+       *
+       * <code>bool is_locked = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsLocked() {
+        
+        isLocked_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -989,9 +1141,9 @@ public final class PlayerWorldSceneInfoOuterClass {
     java.lang.String[] descriptorData = {
       "\n\032PlayerWorldSceneInfo.proto\032\022MapLayerIn" +
       "fo.proto\"}\n\024PlayerWorldSceneInfo\022\031\n\021scen" +
-      "e_tag_id_list\030\005 \003(\r\022\021\n\tis_locked\030\n \001(\010\022\020" +
-      "\n\010scene_id\030\013 \001(\r\022%\n\016map_layer_info\030\016 \001(\013" +
-      "2\r.MapLayerInfoB\033\n\031emu.grasscutter.net.p" +
+      "e_tag_id_list\030\006 \003(\r\022%\n\016map_layer_info\030\016 " +
+      "\001(\0132\r.MapLayerInfo\022\020\n\010scene_id\030\010 \001(\r\022\021\n\t" +
+      "is_locked\030\017 \001(\010B\033\n\031emu.grasscutter.net.p" +
       "rotob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -1004,7 +1156,7 @@ public final class PlayerWorldSceneInfoOuterClass {
     internal_static_PlayerWorldSceneInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerWorldSceneInfo_descriptor,
-        new java.lang.String[] { "SceneTagIdList", "IsLocked", "SceneId", "MapLayerInfo", });
+        new java.lang.String[] { "SceneTagIdList", "MapLayerInfo", "SceneId", "IsLocked", });
     emu.grasscutter.net.proto.MapLayerInfoOuterClass.getDescriptor();
   }
 

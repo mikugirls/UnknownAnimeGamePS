@@ -23,7 +23,7 @@ public final class SceneInitFinishRspOuterClass {
      * Offset: 0x20
      * </pre>
      *
-     * <code>int32 retcode = 1;</code>
+     * <code>int32 retcode = 14;</code>
      * @return The retcode.
      */
     int getRetcode();
@@ -33,14 +33,14 @@ public final class SceneInitFinishRspOuterClass {
      * Offset: 0x24
      * </pre>
      *
-     * <code>uint32 enter_scene_token = 4;</code>
+     * <code>uint32 enter_scene_token = 2;</code>
      * @return The enterSceneToken.
      */
     int getEnterSceneToken();
   }
   /**
    * <pre>
-   * CmdId: 4231
+   * CmdId: 3061
    * </pre>
    *
    * Protobuf type {@code SceneInitFinishRsp}
@@ -87,14 +87,14 @@ public final class SceneInitFinishRspOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            case 32: {
+            case 16: {
 
               enterSceneToken_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+
+              retcode_ = input.readInt32();
               break;
             }
             default: {
@@ -129,14 +129,14 @@ public final class SceneInitFinishRspOuterClass {
               emu.grasscutter.net.proto.SceneInitFinishRspOuterClass.SceneInitFinishRsp.class, emu.grasscutter.net.proto.SceneInitFinishRspOuterClass.SceneInitFinishRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 1;
+    public static final int RETCODE_FIELD_NUMBER = 14;
     private int retcode_;
     /**
      * <pre>
      * Offset: 0x20
      * </pre>
      *
-     * <code>int32 retcode = 1;</code>
+     * <code>int32 retcode = 14;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -144,14 +144,14 @@ public final class SceneInitFinishRspOuterClass {
       return retcode_;
     }
 
-    public static final int ENTER_SCENE_TOKEN_FIELD_NUMBER = 4;
+    public static final int ENTER_SCENE_TOKEN_FIELD_NUMBER = 2;
     private int enterSceneToken_;
     /**
      * <pre>
      * Offset: 0x24
      * </pre>
      *
-     * <code>uint32 enter_scene_token = 4;</code>
+     * <code>uint32 enter_scene_token = 2;</code>
      * @return The enterSceneToken.
      */
     @java.lang.Override
@@ -173,11 +173,11 @@ public final class SceneInitFinishRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (retcode_ != 0) {
-        output.writeInt32(1, retcode_);
-      }
       if (enterSceneToken_ != 0) {
-        output.writeUInt32(4, enterSceneToken_);
+        output.writeUInt32(2, enterSceneToken_);
+      }
+      if (retcode_ != 0) {
+        output.writeInt32(14, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -188,13 +188,13 @@ public final class SceneInitFinishRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (retcode_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, retcode_);
-      }
       if (enterSceneToken_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, enterSceneToken_);
+          .computeUInt32Size(2, enterSceneToken_);
+      }
+      if (retcode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(14, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -327,7 +327,7 @@ public final class SceneInitFinishRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 4231
+     * CmdId: 3061
      * </pre>
      *
      * Protobuf type {@code SceneInitFinishRsp}
@@ -488,7 +488,7 @@ public final class SceneInitFinishRspOuterClass {
        * Offset: 0x20
        * </pre>
        *
-       * <code>int32 retcode = 1;</code>
+       * <code>int32 retcode = 14;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -500,7 +500,7 @@ public final class SceneInitFinishRspOuterClass {
        * Offset: 0x20
        * </pre>
        *
-       * <code>int32 retcode = 1;</code>
+       * <code>int32 retcode = 14;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -515,7 +515,7 @@ public final class SceneInitFinishRspOuterClass {
        * Offset: 0x20
        * </pre>
        *
-       * <code>int32 retcode = 1;</code>
+       * <code>int32 retcode = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -531,7 +531,7 @@ public final class SceneInitFinishRspOuterClass {
        * Offset: 0x24
        * </pre>
        *
-       * <code>uint32 enter_scene_token = 4;</code>
+       * <code>uint32 enter_scene_token = 2;</code>
        * @return The enterSceneToken.
        */
       @java.lang.Override
@@ -543,7 +543,7 @@ public final class SceneInitFinishRspOuterClass {
        * Offset: 0x24
        * </pre>
        *
-       * <code>uint32 enter_scene_token = 4;</code>
+       * <code>uint32 enter_scene_token = 2;</code>
        * @param value The enterSceneToken to set.
        * @return This builder for chaining.
        */
@@ -558,7 +558,7 @@ public final class SceneInitFinishRspOuterClass {
        * Offset: 0x24
        * </pre>
        *
-       * <code>uint32 enter_scene_token = 4;</code>
+       * <code>uint32 enter_scene_token = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearEnterSceneToken() {
@@ -635,8 +635,8 @@ public final class SceneInitFinishRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\030SceneInitFinishRsp.proto\"@\n\022SceneInitF" +
-      "inishRsp\022\017\n\007retcode\030\001 \001(\005\022\031\n\021enter_scene" +
-      "_token\030\004 \001(\rB\033\n\031emu.grasscutter.net.prot" +
+      "inishRsp\022\017\n\007retcode\030\016 \001(\005\022\031\n\021enter_scene" +
+      "_token\030\002 \001(\rB\033\n\031emu.grasscutter.net.prot" +
       "ob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

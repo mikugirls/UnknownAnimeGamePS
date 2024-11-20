@@ -19,14 +19,18 @@ public final class SceneInitFinishReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 enter_scene_token = 4;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>uint32 enter_scene_token = 13;</code>
      * @return The enterSceneToken.
      */
     int getEnterSceneToken();
   }
   /**
    * <pre>
-   * CmdId: 8793
+   * CmdId: 105
    * </pre>
    *
    * Protobuf type {@code SceneInitFinishReq}
@@ -73,7 +77,7 @@ public final class SceneInitFinishReqOuterClass {
             case 0:
               done = true;
               break;
-            case 32: {
+            case 104: {
 
               enterSceneToken_ = input.readUInt32();
               break;
@@ -110,10 +114,14 @@ public final class SceneInitFinishReqOuterClass {
               emu.grasscutter.net.proto.SceneInitFinishReqOuterClass.SceneInitFinishReq.class, emu.grasscutter.net.proto.SceneInitFinishReqOuterClass.SceneInitFinishReq.Builder.class);
     }
 
-    public static final int ENTER_SCENE_TOKEN_FIELD_NUMBER = 4;
+    public static final int ENTER_SCENE_TOKEN_FIELD_NUMBER = 13;
     private int enterSceneToken_;
     /**
-     * <code>uint32 enter_scene_token = 4;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>uint32 enter_scene_token = 13;</code>
      * @return The enterSceneToken.
      */
     @java.lang.Override
@@ -136,7 +144,7 @@ public final class SceneInitFinishReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (enterSceneToken_ != 0) {
-        output.writeUInt32(4, enterSceneToken_);
+        output.writeUInt32(13, enterSceneToken_);
       }
       unknownFields.writeTo(output);
     }
@@ -149,7 +157,7 @@ public final class SceneInitFinishReqOuterClass {
       size = 0;
       if (enterSceneToken_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, enterSceneToken_);
+          .computeUInt32Size(13, enterSceneToken_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -278,7 +286,7 @@ public final class SceneInitFinishReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 8793
+     * CmdId: 105
      * </pre>
      *
      * Protobuf type {@code SceneInitFinishReq}
@@ -429,7 +437,11 @@ public final class SceneInitFinishReqOuterClass {
 
       private int enterSceneToken_ ;
       /**
-       * <code>uint32 enter_scene_token = 4;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>uint32 enter_scene_token = 13;</code>
        * @return The enterSceneToken.
        */
       @java.lang.Override
@@ -437,7 +449,11 @@ public final class SceneInitFinishReqOuterClass {
         return enterSceneToken_;
       }
       /**
-       * <code>uint32 enter_scene_token = 4;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>uint32 enter_scene_token = 13;</code>
        * @param value The enterSceneToken to set.
        * @return This builder for chaining.
        */
@@ -448,7 +464,11 @@ public final class SceneInitFinishReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 enter_scene_token = 4;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>uint32 enter_scene_token = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearEnterSceneToken() {
@@ -525,7 +545,7 @@ public final class SceneInitFinishReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\030SceneInitFinishReq.proto\"/\n\022SceneInitF" +
-      "inishReq\022\031\n\021enter_scene_token\030\004 \001(\rB\033\n\031e" +
+      "inishReq\022\031\n\021enter_scene_token\030\r \001(\rB\033\n\031e" +
       "mu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

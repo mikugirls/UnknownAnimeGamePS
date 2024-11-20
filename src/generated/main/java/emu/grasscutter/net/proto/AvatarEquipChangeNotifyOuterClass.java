@@ -19,62 +19,102 @@ public final class AvatarEquipChangeNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint64 avatar_guid = 1;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>.SceneReliquaryInfo reliquary = 2;</code>
+     * @return Whether the reliquary field is set.
+     */
+    boolean hasReliquary();
+    /**
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>.SceneReliquaryInfo reliquary = 2;</code>
+     * @return The reliquary.
+     */
+    emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfo getReliquary();
+    /**
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>.SceneReliquaryInfo reliquary = 2;</code>
+     */
+    emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfoOrBuilder getReliquaryOrBuilder();
+
+    /**
+     * <pre>
+     * Offset: 0x28
+     * </pre>
+     *
+     * <code>.SceneWeaponInfo weapon = 5;</code>
+     * @return Whether the weapon field is set.
+     */
+    boolean hasWeapon();
+    /**
+     * <pre>
+     * Offset: 0x28
+     * </pre>
+     *
+     * <code>.SceneWeaponInfo weapon = 5;</code>
+     * @return The weapon.
+     */
+    emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo getWeapon();
+    /**
+     * <pre>
+     * Offset: 0x28
+     * </pre>
+     *
+     * <code>.SceneWeaponInfo weapon = 5;</code>
+     */
+    emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfoOrBuilder getWeaponOrBuilder();
+
+    /**
+     * <pre>
+     * Offset: 0x30
+     * </pre>
+     *
+     * <code>uint64 avatar_guid = 12;</code>
      * @return The avatarGuid.
      */
     long getAvatarGuid();
 
     /**
-     * <code>.SceneWeaponInfo weapon = 4;</code>
-     * @return Whether the weapon field is set.
-     */
-    boolean hasWeapon();
-    /**
-     * <code>.SceneWeaponInfo weapon = 4;</code>
-     * @return The weapon.
-     */
-    emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo getWeapon();
-    /**
-     * <code>.SceneWeaponInfo weapon = 4;</code>
-     */
-    emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfoOrBuilder getWeaponOrBuilder();
-
-    /**
-     * <code>uint64 equip_guid = 7;</code>
+     * <pre>
+     * Offset: 0x38
+     * </pre>
+     *
+     * <code>uint64 equip_guid = 15;</code>
      * @return The equipGuid.
      */
     long getEquipGuid();
 
     /**
-     * <code>uint32 equip_type = 10;</code>
+     * <pre>
+     * Offset: 0x40
+     * </pre>
+     *
+     * <code>uint32 equip_type = 7;</code>
      * @return The equipType.
      */
     int getEquipType();
 
     /**
-     * <code>.SceneReliquaryInfo reliquary = 11;</code>
-     * @return Whether the reliquary field is set.
-     */
-    boolean hasReliquary();
-    /**
-     * <code>.SceneReliquaryInfo reliquary = 11;</code>
-     * @return The reliquary.
-     */
-    emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfo getReliquary();
-    /**
-     * <code>.SceneReliquaryInfo reliquary = 11;</code>
-     */
-    emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfoOrBuilder getReliquaryOrBuilder();
-
-    /**
-     * <code>uint32 item_id = 12;</code>
+     * <pre>
+     * Offset: 0x44
+     * </pre>
+     *
+     * <code>uint32 item_id = 6;</code>
      * @return The itemId.
      */
     int getItemId();
   }
   /**
    * <pre>
-   * CmdId: 6767
+   * CmdId: 1124
    * </pre>
    *
    * Protobuf type {@code AvatarEquipChangeNotify}
@@ -121,35 +161,7 @@ public final class AvatarEquipChangeNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
-
-              avatarGuid_ = input.readUInt64();
-              break;
-            }
-            case 34: {
-              emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.Builder subBuilder = null;
-              if (weapon_ != null) {
-                subBuilder = weapon_.toBuilder();
-              }
-              weapon_ = input.readMessage(emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(weapon_);
-                weapon_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 56: {
-
-              equipGuid_ = input.readUInt64();
-              break;
-            }
-            case 80: {
-
-              equipType_ = input.readUInt32();
-              break;
-            }
-            case 90: {
+            case 18: {
               emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfo.Builder subBuilder = null;
               if (reliquary_ != null) {
                 subBuilder = reliquary_.toBuilder();
@@ -162,9 +174,37 @@ public final class AvatarEquipChangeNotifyOuterClass {
 
               break;
             }
-            case 96: {
+            case 42: {
+              emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.Builder subBuilder = null;
+              if (weapon_ != null) {
+                subBuilder = weapon_.toBuilder();
+              }
+              weapon_ = input.readMessage(emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(weapon_);
+                weapon_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 48: {
 
               itemId_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+
+              equipType_ = input.readUInt32();
+              break;
+            }
+            case 96: {
+
+              avatarGuid_ = input.readUInt64();
+              break;
+            }
+            case 120: {
+
+              equipGuid_ = input.readUInt64();
               break;
             }
             default: {
@@ -199,69 +239,14 @@ public final class AvatarEquipChangeNotifyOuterClass {
               emu.grasscutter.net.proto.AvatarEquipChangeNotifyOuterClass.AvatarEquipChangeNotify.class, emu.grasscutter.net.proto.AvatarEquipChangeNotifyOuterClass.AvatarEquipChangeNotify.Builder.class);
     }
 
-    public static final int AVATAR_GUID_FIELD_NUMBER = 1;
-    private long avatarGuid_;
-    /**
-     * <code>uint64 avatar_guid = 1;</code>
-     * @return The avatarGuid.
-     */
-    @java.lang.Override
-    public long getAvatarGuid() {
-      return avatarGuid_;
-    }
-
-    public static final int WEAPON_FIELD_NUMBER = 4;
-    private emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo weapon_;
-    /**
-     * <code>.SceneWeaponInfo weapon = 4;</code>
-     * @return Whether the weapon field is set.
-     */
-    @java.lang.Override
-    public boolean hasWeapon() {
-      return weapon_ != null;
-    }
-    /**
-     * <code>.SceneWeaponInfo weapon = 4;</code>
-     * @return The weapon.
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo getWeapon() {
-      return weapon_ == null ? emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.getDefaultInstance() : weapon_;
-    }
-    /**
-     * <code>.SceneWeaponInfo weapon = 4;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfoOrBuilder getWeaponOrBuilder() {
-      return getWeapon();
-    }
-
-    public static final int EQUIP_GUID_FIELD_NUMBER = 7;
-    private long equipGuid_;
-    /**
-     * <code>uint64 equip_guid = 7;</code>
-     * @return The equipGuid.
-     */
-    @java.lang.Override
-    public long getEquipGuid() {
-      return equipGuid_;
-    }
-
-    public static final int EQUIP_TYPE_FIELD_NUMBER = 10;
-    private int equipType_;
-    /**
-     * <code>uint32 equip_type = 10;</code>
-     * @return The equipType.
-     */
-    @java.lang.Override
-    public int getEquipType() {
-      return equipType_;
-    }
-
-    public static final int RELIQUARY_FIELD_NUMBER = 11;
+    public static final int RELIQUARY_FIELD_NUMBER = 2;
     private emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfo reliquary_;
     /**
-     * <code>.SceneReliquaryInfo reliquary = 11;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>.SceneReliquaryInfo reliquary = 2;</code>
      * @return Whether the reliquary field is set.
      */
     @java.lang.Override
@@ -269,7 +254,11 @@ public final class AvatarEquipChangeNotifyOuterClass {
       return reliquary_ != null;
     }
     /**
-     * <code>.SceneReliquaryInfo reliquary = 11;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>.SceneReliquaryInfo reliquary = 2;</code>
      * @return The reliquary.
      */
     @java.lang.Override
@@ -277,17 +266,108 @@ public final class AvatarEquipChangeNotifyOuterClass {
       return reliquary_ == null ? emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfo.getDefaultInstance() : reliquary_;
     }
     /**
-     * <code>.SceneReliquaryInfo reliquary = 11;</code>
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
+     * <code>.SceneReliquaryInfo reliquary = 2;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfoOrBuilder getReliquaryOrBuilder() {
       return getReliquary();
     }
 
-    public static final int ITEM_ID_FIELD_NUMBER = 12;
+    public static final int WEAPON_FIELD_NUMBER = 5;
+    private emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo weapon_;
+    /**
+     * <pre>
+     * Offset: 0x28
+     * </pre>
+     *
+     * <code>.SceneWeaponInfo weapon = 5;</code>
+     * @return Whether the weapon field is set.
+     */
+    @java.lang.Override
+    public boolean hasWeapon() {
+      return weapon_ != null;
+    }
+    /**
+     * <pre>
+     * Offset: 0x28
+     * </pre>
+     *
+     * <code>.SceneWeaponInfo weapon = 5;</code>
+     * @return The weapon.
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo getWeapon() {
+      return weapon_ == null ? emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.getDefaultInstance() : weapon_;
+    }
+    /**
+     * <pre>
+     * Offset: 0x28
+     * </pre>
+     *
+     * <code>.SceneWeaponInfo weapon = 5;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfoOrBuilder getWeaponOrBuilder() {
+      return getWeapon();
+    }
+
+    public static final int AVATAR_GUID_FIELD_NUMBER = 12;
+    private long avatarGuid_;
+    /**
+     * <pre>
+     * Offset: 0x30
+     * </pre>
+     *
+     * <code>uint64 avatar_guid = 12;</code>
+     * @return The avatarGuid.
+     */
+    @java.lang.Override
+    public long getAvatarGuid() {
+      return avatarGuid_;
+    }
+
+    public static final int EQUIP_GUID_FIELD_NUMBER = 15;
+    private long equipGuid_;
+    /**
+     * <pre>
+     * Offset: 0x38
+     * </pre>
+     *
+     * <code>uint64 equip_guid = 15;</code>
+     * @return The equipGuid.
+     */
+    @java.lang.Override
+    public long getEquipGuid() {
+      return equipGuid_;
+    }
+
+    public static final int EQUIP_TYPE_FIELD_NUMBER = 7;
+    private int equipType_;
+    /**
+     * <pre>
+     * Offset: 0x40
+     * </pre>
+     *
+     * <code>uint32 equip_type = 7;</code>
+     * @return The equipType.
+     */
+    @java.lang.Override
+    public int getEquipType() {
+      return equipType_;
+    }
+
+    public static final int ITEM_ID_FIELD_NUMBER = 6;
     private int itemId_;
     /**
-     * <code>uint32 item_id = 12;</code>
+     * <pre>
+     * Offset: 0x44
+     * </pre>
+     *
+     * <code>uint32 item_id = 6;</code>
      * @return The itemId.
      */
     @java.lang.Override
@@ -309,23 +389,23 @@ public final class AvatarEquipChangeNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (avatarGuid_ != 0L) {
-        output.writeUInt64(1, avatarGuid_);
+      if (reliquary_ != null) {
+        output.writeMessage(2, getReliquary());
       }
       if (weapon_ != null) {
-        output.writeMessage(4, getWeapon());
-      }
-      if (equipGuid_ != 0L) {
-        output.writeUInt64(7, equipGuid_);
-      }
-      if (equipType_ != 0) {
-        output.writeUInt32(10, equipType_);
-      }
-      if (reliquary_ != null) {
-        output.writeMessage(11, getReliquary());
+        output.writeMessage(5, getWeapon());
       }
       if (itemId_ != 0) {
-        output.writeUInt32(12, itemId_);
+        output.writeUInt32(6, itemId_);
+      }
+      if (equipType_ != 0) {
+        output.writeUInt32(7, equipType_);
+      }
+      if (avatarGuid_ != 0L) {
+        output.writeUInt64(12, avatarGuid_);
+      }
+      if (equipGuid_ != 0L) {
+        output.writeUInt64(15, equipGuid_);
       }
       unknownFields.writeTo(output);
     }
@@ -336,29 +416,29 @@ public final class AvatarEquipChangeNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (avatarGuid_ != 0L) {
+      if (reliquary_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, avatarGuid_);
+          .computeMessageSize(2, getReliquary());
       }
       if (weapon_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getWeapon());
-      }
-      if (equipGuid_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(7, equipGuid_);
-      }
-      if (equipType_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, equipType_);
-      }
-      if (reliquary_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, getReliquary());
+          .computeMessageSize(5, getWeapon());
       }
       if (itemId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, itemId_);
+          .computeUInt32Size(6, itemId_);
+      }
+      if (equipType_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, equipType_);
+      }
+      if (avatarGuid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(12, avatarGuid_);
+      }
+      if (equipGuid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(15, equipGuid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -375,22 +455,22 @@ public final class AvatarEquipChangeNotifyOuterClass {
       }
       emu.grasscutter.net.proto.AvatarEquipChangeNotifyOuterClass.AvatarEquipChangeNotify other = (emu.grasscutter.net.proto.AvatarEquipChangeNotifyOuterClass.AvatarEquipChangeNotify) obj;
 
-      if (getAvatarGuid()
-          != other.getAvatarGuid()) return false;
-      if (hasWeapon() != other.hasWeapon()) return false;
-      if (hasWeapon()) {
-        if (!getWeapon()
-            .equals(other.getWeapon())) return false;
-      }
-      if (getEquipGuid()
-          != other.getEquipGuid()) return false;
-      if (getEquipType()
-          != other.getEquipType()) return false;
       if (hasReliquary() != other.hasReliquary()) return false;
       if (hasReliquary()) {
         if (!getReliquary()
             .equals(other.getReliquary())) return false;
       }
+      if (hasWeapon() != other.hasWeapon()) return false;
+      if (hasWeapon()) {
+        if (!getWeapon()
+            .equals(other.getWeapon())) return false;
+      }
+      if (getAvatarGuid()
+          != other.getAvatarGuid()) return false;
+      if (getEquipGuid()
+          != other.getEquipGuid()) return false;
+      if (getEquipType()
+          != other.getEquipType()) return false;
       if (getItemId()
           != other.getItemId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -404,22 +484,22 @@ public final class AvatarEquipChangeNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + AVATAR_GUID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getAvatarGuid());
+      if (hasReliquary()) {
+        hash = (37 * hash) + RELIQUARY_FIELD_NUMBER;
+        hash = (53 * hash) + getReliquary().hashCode();
+      }
       if (hasWeapon()) {
         hash = (37 * hash) + WEAPON_FIELD_NUMBER;
         hash = (53 * hash) + getWeapon().hashCode();
       }
+      hash = (37 * hash) + AVATAR_GUID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAvatarGuid());
       hash = (37 * hash) + EQUIP_GUID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getEquipGuid());
       hash = (37 * hash) + EQUIP_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getEquipType();
-      if (hasReliquary()) {
-        hash = (37 * hash) + RELIQUARY_FIELD_NUMBER;
-        hash = (53 * hash) + getReliquary().hashCode();
-      }
       hash = (37 * hash) + ITEM_ID_FIELD_NUMBER;
       hash = (53 * hash) + getItemId();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -519,7 +599,7 @@ public final class AvatarEquipChangeNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 6767
+     * CmdId: 1124
      * </pre>
      *
      * Protobuf type {@code AvatarEquipChangeNotify}
@@ -559,24 +639,24 @@ public final class AvatarEquipChangeNotifyOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        avatarGuid_ = 0L;
-
-        if (weaponBuilder_ == null) {
-          weapon_ = null;
-        } else {
-          weapon_ = null;
-          weaponBuilder_ = null;
-        }
-        equipGuid_ = 0L;
-
-        equipType_ = 0;
-
         if (reliquaryBuilder_ == null) {
           reliquary_ = null;
         } else {
           reliquary_ = null;
           reliquaryBuilder_ = null;
         }
+        if (weaponBuilder_ == null) {
+          weapon_ = null;
+        } else {
+          weapon_ = null;
+          weaponBuilder_ = null;
+        }
+        avatarGuid_ = 0L;
+
+        equipGuid_ = 0L;
+
+        equipType_ = 0;
+
         itemId_ = 0;
 
         return this;
@@ -605,19 +685,19 @@ public final class AvatarEquipChangeNotifyOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.AvatarEquipChangeNotifyOuterClass.AvatarEquipChangeNotify buildPartial() {
         emu.grasscutter.net.proto.AvatarEquipChangeNotifyOuterClass.AvatarEquipChangeNotify result = new emu.grasscutter.net.proto.AvatarEquipChangeNotifyOuterClass.AvatarEquipChangeNotify(this);
-        result.avatarGuid_ = avatarGuid_;
-        if (weaponBuilder_ == null) {
-          result.weapon_ = weapon_;
-        } else {
-          result.weapon_ = weaponBuilder_.build();
-        }
-        result.equipGuid_ = equipGuid_;
-        result.equipType_ = equipType_;
         if (reliquaryBuilder_ == null) {
           result.reliquary_ = reliquary_;
         } else {
           result.reliquary_ = reliquaryBuilder_.build();
         }
+        if (weaponBuilder_ == null) {
+          result.weapon_ = weapon_;
+        } else {
+          result.weapon_ = weaponBuilder_.build();
+        }
+        result.avatarGuid_ = avatarGuid_;
+        result.equipGuid_ = equipGuid_;
+        result.equipType_ = equipType_;
         result.itemId_ = itemId_;
         onBuilt();
         return result;
@@ -667,20 +747,20 @@ public final class AvatarEquipChangeNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.AvatarEquipChangeNotifyOuterClass.AvatarEquipChangeNotify other) {
         if (other == emu.grasscutter.net.proto.AvatarEquipChangeNotifyOuterClass.AvatarEquipChangeNotify.getDefaultInstance()) return this;
-        if (other.getAvatarGuid() != 0L) {
-          setAvatarGuid(other.getAvatarGuid());
+        if (other.hasReliquary()) {
+          mergeReliquary(other.getReliquary());
         }
         if (other.hasWeapon()) {
           mergeWeapon(other.getWeapon());
+        }
+        if (other.getAvatarGuid() != 0L) {
+          setAvatarGuid(other.getAvatarGuid());
         }
         if (other.getEquipGuid() != 0L) {
           setEquipGuid(other.getEquipGuid());
         }
         if (other.getEquipType() != 0) {
           setEquipType(other.getEquipType());
-        }
-        if (other.hasReliquary()) {
-          mergeReliquary(other.getReliquary());
         }
         if (other.getItemId() != 0) {
           setItemId(other.getItemId());
@@ -714,230 +794,26 @@ public final class AvatarEquipChangeNotifyOuterClass {
         return this;
       }
 
-      private long avatarGuid_ ;
-      /**
-       * <code>uint64 avatar_guid = 1;</code>
-       * @return The avatarGuid.
-       */
-      @java.lang.Override
-      public long getAvatarGuid() {
-        return avatarGuid_;
-      }
-      /**
-       * <code>uint64 avatar_guid = 1;</code>
-       * @param value The avatarGuid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAvatarGuid(long value) {
-        
-        avatarGuid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 avatar_guid = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAvatarGuid() {
-        
-        avatarGuid_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo weapon_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo, emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.Builder, emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfoOrBuilder> weaponBuilder_;
-      /**
-       * <code>.SceneWeaponInfo weapon = 4;</code>
-       * @return Whether the weapon field is set.
-       */
-      public boolean hasWeapon() {
-        return weaponBuilder_ != null || weapon_ != null;
-      }
-      /**
-       * <code>.SceneWeaponInfo weapon = 4;</code>
-       * @return The weapon.
-       */
-      public emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo getWeapon() {
-        if (weaponBuilder_ == null) {
-          return weapon_ == null ? emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.getDefaultInstance() : weapon_;
-        } else {
-          return weaponBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.SceneWeaponInfo weapon = 4;</code>
-       */
-      public Builder setWeapon(emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo value) {
-        if (weaponBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          weapon_ = value;
-          onChanged();
-        } else {
-          weaponBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.SceneWeaponInfo weapon = 4;</code>
-       */
-      public Builder setWeapon(
-          emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.Builder builderForValue) {
-        if (weaponBuilder_ == null) {
-          weapon_ = builderForValue.build();
-          onChanged();
-        } else {
-          weaponBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.SceneWeaponInfo weapon = 4;</code>
-       */
-      public Builder mergeWeapon(emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo value) {
-        if (weaponBuilder_ == null) {
-          if (weapon_ != null) {
-            weapon_ =
-              emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.newBuilder(weapon_).mergeFrom(value).buildPartial();
-          } else {
-            weapon_ = value;
-          }
-          onChanged();
-        } else {
-          weaponBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.SceneWeaponInfo weapon = 4;</code>
-       */
-      public Builder clearWeapon() {
-        if (weaponBuilder_ == null) {
-          weapon_ = null;
-          onChanged();
-        } else {
-          weapon_ = null;
-          weaponBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.SceneWeaponInfo weapon = 4;</code>
-       */
-      public emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.Builder getWeaponBuilder() {
-        
-        onChanged();
-        return getWeaponFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.SceneWeaponInfo weapon = 4;</code>
-       */
-      public emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfoOrBuilder getWeaponOrBuilder() {
-        if (weaponBuilder_ != null) {
-          return weaponBuilder_.getMessageOrBuilder();
-        } else {
-          return weapon_ == null ?
-              emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.getDefaultInstance() : weapon_;
-        }
-      }
-      /**
-       * <code>.SceneWeaponInfo weapon = 4;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo, emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.Builder, emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfoOrBuilder> 
-          getWeaponFieldBuilder() {
-        if (weaponBuilder_ == null) {
-          weaponBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo, emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.Builder, emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfoOrBuilder>(
-                  getWeapon(),
-                  getParentForChildren(),
-                  isClean());
-          weapon_ = null;
-        }
-        return weaponBuilder_;
-      }
-
-      private long equipGuid_ ;
-      /**
-       * <code>uint64 equip_guid = 7;</code>
-       * @return The equipGuid.
-       */
-      @java.lang.Override
-      public long getEquipGuid() {
-        return equipGuid_;
-      }
-      /**
-       * <code>uint64 equip_guid = 7;</code>
-       * @param value The equipGuid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEquipGuid(long value) {
-        
-        equipGuid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 equip_guid = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEquipGuid() {
-        
-        equipGuid_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private int equipType_ ;
-      /**
-       * <code>uint32 equip_type = 10;</code>
-       * @return The equipType.
-       */
-      @java.lang.Override
-      public int getEquipType() {
-        return equipType_;
-      }
-      /**
-       * <code>uint32 equip_type = 10;</code>
-       * @param value The equipType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEquipType(int value) {
-        
-        equipType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 equip_type = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEquipType() {
-        
-        equipType_ = 0;
-        onChanged();
-        return this;
-      }
-
       private emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfo reliquary_;
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfo, emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfo.Builder, emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfoOrBuilder> reliquaryBuilder_;
       /**
-       * <code>.SceneReliquaryInfo reliquary = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>.SceneReliquaryInfo reliquary = 2;</code>
        * @return Whether the reliquary field is set.
        */
       public boolean hasReliquary() {
         return reliquaryBuilder_ != null || reliquary_ != null;
       }
       /**
-       * <code>.SceneReliquaryInfo reliquary = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>.SceneReliquaryInfo reliquary = 2;</code>
        * @return The reliquary.
        */
       public emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfo getReliquary() {
@@ -948,7 +824,11 @@ public final class AvatarEquipChangeNotifyOuterClass {
         }
       }
       /**
-       * <code>.SceneReliquaryInfo reliquary = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>.SceneReliquaryInfo reliquary = 2;</code>
        */
       public Builder setReliquary(emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfo value) {
         if (reliquaryBuilder_ == null) {
@@ -964,7 +844,11 @@ public final class AvatarEquipChangeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.SceneReliquaryInfo reliquary = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>.SceneReliquaryInfo reliquary = 2;</code>
        */
       public Builder setReliquary(
           emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfo.Builder builderForValue) {
@@ -978,7 +862,11 @@ public final class AvatarEquipChangeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.SceneReliquaryInfo reliquary = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>.SceneReliquaryInfo reliquary = 2;</code>
        */
       public Builder mergeReliquary(emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfo value) {
         if (reliquaryBuilder_ == null) {
@@ -996,7 +884,11 @@ public final class AvatarEquipChangeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.SceneReliquaryInfo reliquary = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>.SceneReliquaryInfo reliquary = 2;</code>
        */
       public Builder clearReliquary() {
         if (reliquaryBuilder_ == null) {
@@ -1010,7 +902,11 @@ public final class AvatarEquipChangeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.SceneReliquaryInfo reliquary = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>.SceneReliquaryInfo reliquary = 2;</code>
        */
       public emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfo.Builder getReliquaryBuilder() {
         
@@ -1018,7 +914,11 @@ public final class AvatarEquipChangeNotifyOuterClass {
         return getReliquaryFieldBuilder().getBuilder();
       }
       /**
-       * <code>.SceneReliquaryInfo reliquary = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>.SceneReliquaryInfo reliquary = 2;</code>
        */
       public emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfoOrBuilder getReliquaryOrBuilder() {
         if (reliquaryBuilder_ != null) {
@@ -1029,7 +929,11 @@ public final class AvatarEquipChangeNotifyOuterClass {
         }
       }
       /**
-       * <code>.SceneReliquaryInfo reliquary = 11;</code>
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
+       * <code>.SceneReliquaryInfo reliquary = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfo, emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfo.Builder, emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.SceneReliquaryInfoOrBuilder> 
@@ -1045,9 +949,297 @@ public final class AvatarEquipChangeNotifyOuterClass {
         return reliquaryBuilder_;
       }
 
+      private emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo weapon_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo, emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.Builder, emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfoOrBuilder> weaponBuilder_;
+      /**
+       * <pre>
+       * Offset: 0x28
+       * </pre>
+       *
+       * <code>.SceneWeaponInfo weapon = 5;</code>
+       * @return Whether the weapon field is set.
+       */
+      public boolean hasWeapon() {
+        return weaponBuilder_ != null || weapon_ != null;
+      }
+      /**
+       * <pre>
+       * Offset: 0x28
+       * </pre>
+       *
+       * <code>.SceneWeaponInfo weapon = 5;</code>
+       * @return The weapon.
+       */
+      public emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo getWeapon() {
+        if (weaponBuilder_ == null) {
+          return weapon_ == null ? emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.getDefaultInstance() : weapon_;
+        } else {
+          return weaponBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Offset: 0x28
+       * </pre>
+       *
+       * <code>.SceneWeaponInfo weapon = 5;</code>
+       */
+      public Builder setWeapon(emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo value) {
+        if (weaponBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          weapon_ = value;
+          onChanged();
+        } else {
+          weaponBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset: 0x28
+       * </pre>
+       *
+       * <code>.SceneWeaponInfo weapon = 5;</code>
+       */
+      public Builder setWeapon(
+          emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.Builder builderForValue) {
+        if (weaponBuilder_ == null) {
+          weapon_ = builderForValue.build();
+          onChanged();
+        } else {
+          weaponBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset: 0x28
+       * </pre>
+       *
+       * <code>.SceneWeaponInfo weapon = 5;</code>
+       */
+      public Builder mergeWeapon(emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo value) {
+        if (weaponBuilder_ == null) {
+          if (weapon_ != null) {
+            weapon_ =
+              emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.newBuilder(weapon_).mergeFrom(value).buildPartial();
+          } else {
+            weapon_ = value;
+          }
+          onChanged();
+        } else {
+          weaponBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset: 0x28
+       * </pre>
+       *
+       * <code>.SceneWeaponInfo weapon = 5;</code>
+       */
+      public Builder clearWeapon() {
+        if (weaponBuilder_ == null) {
+          weapon_ = null;
+          onChanged();
+        } else {
+          weapon_ = null;
+          weaponBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset: 0x28
+       * </pre>
+       *
+       * <code>.SceneWeaponInfo weapon = 5;</code>
+       */
+      public emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.Builder getWeaponBuilder() {
+        
+        onChanged();
+        return getWeaponFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Offset: 0x28
+       * </pre>
+       *
+       * <code>.SceneWeaponInfo weapon = 5;</code>
+       */
+      public emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfoOrBuilder getWeaponOrBuilder() {
+        if (weaponBuilder_ != null) {
+          return weaponBuilder_.getMessageOrBuilder();
+        } else {
+          return weapon_ == null ?
+              emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.getDefaultInstance() : weapon_;
+        }
+      }
+      /**
+       * <pre>
+       * Offset: 0x28
+       * </pre>
+       *
+       * <code>.SceneWeaponInfo weapon = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo, emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.Builder, emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfoOrBuilder> 
+          getWeaponFieldBuilder() {
+        if (weaponBuilder_ == null) {
+          weaponBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo, emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.Builder, emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfoOrBuilder>(
+                  getWeapon(),
+                  getParentForChildren(),
+                  isClean());
+          weapon_ = null;
+        }
+        return weaponBuilder_;
+      }
+
+      private long avatarGuid_ ;
+      /**
+       * <pre>
+       * Offset: 0x30
+       * </pre>
+       *
+       * <code>uint64 avatar_guid = 12;</code>
+       * @return The avatarGuid.
+       */
+      @java.lang.Override
+      public long getAvatarGuid() {
+        return avatarGuid_;
+      }
+      /**
+       * <pre>
+       * Offset: 0x30
+       * </pre>
+       *
+       * <code>uint64 avatar_guid = 12;</code>
+       * @param value The avatarGuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAvatarGuid(long value) {
+        
+        avatarGuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset: 0x30
+       * </pre>
+       *
+       * <code>uint64 avatar_guid = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAvatarGuid() {
+        
+        avatarGuid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long equipGuid_ ;
+      /**
+       * <pre>
+       * Offset: 0x38
+       * </pre>
+       *
+       * <code>uint64 equip_guid = 15;</code>
+       * @return The equipGuid.
+       */
+      @java.lang.Override
+      public long getEquipGuid() {
+        return equipGuid_;
+      }
+      /**
+       * <pre>
+       * Offset: 0x38
+       * </pre>
+       *
+       * <code>uint64 equip_guid = 15;</code>
+       * @param value The equipGuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEquipGuid(long value) {
+        
+        equipGuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset: 0x38
+       * </pre>
+       *
+       * <code>uint64 equip_guid = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEquipGuid() {
+        
+        equipGuid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int equipType_ ;
+      /**
+       * <pre>
+       * Offset: 0x40
+       * </pre>
+       *
+       * <code>uint32 equip_type = 7;</code>
+       * @return The equipType.
+       */
+      @java.lang.Override
+      public int getEquipType() {
+        return equipType_;
+      }
+      /**
+       * <pre>
+       * Offset: 0x40
+       * </pre>
+       *
+       * <code>uint32 equip_type = 7;</code>
+       * @param value The equipType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEquipType(int value) {
+        
+        equipType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Offset: 0x40
+       * </pre>
+       *
+       * <code>uint32 equip_type = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEquipType() {
+        
+        equipType_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int itemId_ ;
       /**
-       * <code>uint32 item_id = 12;</code>
+       * <pre>
+       * Offset: 0x44
+       * </pre>
+       *
+       * <code>uint32 item_id = 6;</code>
        * @return The itemId.
        */
       @java.lang.Override
@@ -1055,7 +1247,11 @@ public final class AvatarEquipChangeNotifyOuterClass {
         return itemId_;
       }
       /**
-       * <code>uint32 item_id = 12;</code>
+       * <pre>
+       * Offset: 0x44
+       * </pre>
+       *
+       * <code>uint32 item_id = 6;</code>
        * @param value The itemId to set.
        * @return This builder for chaining.
        */
@@ -1066,7 +1262,11 @@ public final class AvatarEquipChangeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 item_id = 12;</code>
+       * <pre>
+       * Offset: 0x44
+       * </pre>
+       *
+       * <code>uint32 item_id = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearItemId() {
@@ -1144,11 +1344,11 @@ public final class AvatarEquipChangeNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\035AvatarEquipChangeNotify.proto\032\025SceneWe" +
       "aponInfo.proto\032\030SceneReliquaryInfo.proto" +
-      "\"\261\001\n\027AvatarEquipChangeNotify\022\023\n\013avatar_g" +
-      "uid\030\001 \001(\004\022 \n\006weapon\030\004 \001(\0132\020.SceneWeaponI" +
-      "nfo\022\022\n\nequip_guid\030\007 \001(\004\022\022\n\nequip_type\030\n " +
-      "\001(\r\022&\n\treliquary\030\013 \001(\0132\023.SceneReliquaryI" +
-      "nfo\022\017\n\007item_id\030\014 \001(\rB\033\n\031emu.grasscutter." +
+      "\"\261\001\n\027AvatarEquipChangeNotify\022&\n\treliquar" +
+      "y\030\002 \001(\0132\023.SceneReliquaryInfo\022 \n\006weapon\030\005" +
+      " \001(\0132\020.SceneWeaponInfo\022\023\n\013avatar_guid\030\014 " +
+      "\001(\004\022\022\n\nequip_guid\030\017 \001(\004\022\022\n\nequip_type\030\007 " +
+      "\001(\r\022\017\n\007item_id\030\006 \001(\rB\033\n\031emu.grasscutter." +
       "net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -1162,7 +1362,7 @@ public final class AvatarEquipChangeNotifyOuterClass {
     internal_static_AvatarEquipChangeNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AvatarEquipChangeNotify_descriptor,
-        new java.lang.String[] { "AvatarGuid", "Weapon", "EquipGuid", "EquipType", "Reliquary", "ItemId", });
+        new java.lang.String[] { "Reliquary", "Weapon", "AvatarGuid", "EquipGuid", "EquipType", "ItemId", });
     emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.getDescriptor();
   }

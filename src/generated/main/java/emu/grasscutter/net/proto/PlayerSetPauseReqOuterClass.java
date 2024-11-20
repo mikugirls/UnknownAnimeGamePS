@@ -19,6 +19,10 @@ public final class PlayerSetPauseReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
      * <code>bool is_paused = 9;</code>
      * @return The isPaused.
      */
@@ -26,7 +30,7 @@ public final class PlayerSetPauseReqOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 8076
+   * CmdId: 5330
    * </pre>
    *
    * Protobuf type {@code PlayerSetPauseReq}
@@ -113,6 +117,10 @@ public final class PlayerSetPauseReqOuterClass {
     public static final int IS_PAUSED_FIELD_NUMBER = 9;
     private boolean isPaused_;
     /**
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
      * <code>bool is_paused = 9;</code>
      * @return The isPaused.
      */
@@ -279,7 +287,7 @@ public final class PlayerSetPauseReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 8076
+     * CmdId: 5330
      * </pre>
      *
      * Protobuf type {@code PlayerSetPauseReq}
@@ -430,6 +438,10 @@ public final class PlayerSetPauseReqOuterClass {
 
       private boolean isPaused_ ;
       /**
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
        * <code>bool is_paused = 9;</code>
        * @return The isPaused.
        */
@@ -438,6 +450,10 @@ public final class PlayerSetPauseReqOuterClass {
         return isPaused_;
       }
       /**
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
        * <code>bool is_paused = 9;</code>
        * @param value The isPaused to set.
        * @return This builder for chaining.
@@ -449,6 +465,10 @@ public final class PlayerSetPauseReqOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
        * <code>bool is_paused = 9;</code>
        * @return This builder for chaining.
        */

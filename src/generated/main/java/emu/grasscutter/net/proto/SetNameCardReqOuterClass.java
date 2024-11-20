@@ -19,6 +19,10 @@ public final class SetNameCardReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
      * <code>uint32 name_card_id = 11;</code>
      * @return The nameCardId.
      */
@@ -26,7 +30,7 @@ public final class SetNameCardReqOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 20106
+   * CmdId: 26218
    * </pre>
    *
    * Protobuf type {@code SetNameCardReq}
@@ -113,6 +117,10 @@ public final class SetNameCardReqOuterClass {
     public static final int NAME_CARD_ID_FIELD_NUMBER = 11;
     private int nameCardId_;
     /**
+     * <pre>
+     * Offset: 0x20
+     * </pre>
+     *
      * <code>uint32 name_card_id = 11;</code>
      * @return The nameCardId.
      */
@@ -278,7 +286,7 @@ public final class SetNameCardReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 20106
+     * CmdId: 26218
      * </pre>
      *
      * Protobuf type {@code SetNameCardReq}
@@ -429,6 +437,10 @@ public final class SetNameCardReqOuterClass {
 
       private int nameCardId_ ;
       /**
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
        * <code>uint32 name_card_id = 11;</code>
        * @return The nameCardId.
        */
@@ -437,6 +449,10 @@ public final class SetNameCardReqOuterClass {
         return nameCardId_;
       }
       /**
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
        * <code>uint32 name_card_id = 11;</code>
        * @param value The nameCardId to set.
        * @return This builder for chaining.
@@ -448,6 +464,10 @@ public final class SetNameCardReqOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Offset: 0x20
+       * </pre>
+       *
        * <code>uint32 name_card_id = 11;</code>
        * @return This builder for chaining.
        */

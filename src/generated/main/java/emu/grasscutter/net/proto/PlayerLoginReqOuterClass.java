@@ -19,12 +19,12 @@ public final class PlayerLoginReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string token = 1;</code>
+     * <code>string token = 15;</code>
      * @return The token.
      */
     java.lang.String getToken();
     /**
-     * <code>string token = 1;</code>
+     * <code>string token = 15;</code>
      * @return The bytes for token.
      */
     com.google.protobuf.ByteString
@@ -43,6 +43,36 @@ public final class PlayerLoginReqOuterClass {
         getPlatformBytes();
 
     /**
+     * <code>uint32 tag = 443;</code>
+     * @return The tag.
+     */
+    int getTag();
+
+    /**
+     * <code>string account_uid = 8;</code>
+     * @return The accountUid.
+     */
+    java.lang.String getAccountUid();
+    /**
+     * <code>string account_uid = 8;</code>
+     * @return The bytes for accountUid.
+     */
+    com.google.protobuf.ByteString
+        getAccountUidBytes();
+
+    /**
+     * <code>uint32 platform_type = 3;</code>
+     * @return The platformType.
+     */
+    int getPlatformType();
+
+    /**
+     * <code>uint32 target_uid = 14;</code>
+     * @return The targetUid.
+     */
+    int getTargetUid();
+
+    /**
      * <code>bytes extra_bin_data = 1183;</code>
      * @return The extraBinData.
      */
@@ -59,18 +89,6 @@ public final class PlayerLoginReqOuterClass {
      */
     com.google.protobuf.ByteString
         getCountryCodeBytes();
-
-    /**
-     * <code>string account_uid = 11;</code>
-     * @return The accountUid.
-     */
-    java.lang.String getAccountUid();
-    /**
-     * <code>string account_uid = 11;</code>
-     * @return The bytes for accountUid.
-     */
-    com.google.protobuf.ByteString
-        getAccountUidBytes();
 
     /**
      * <code>uint32 account_type = 9;</code>
@@ -97,12 +115,6 @@ public final class PlayerLoginReqOuterClass {
     long getLoginRand();
 
     /**
-     * <code>uint32 tag = 1158;</code>
-     * @return The tag.
-     */
-    int getTag();
-
-    /**
      * <code>uint32 client_data_version = 420;</code>
      * @return The clientDataVersion.
      */
@@ -113,22 +125,10 @@ public final class PlayerLoginReqOuterClass {
      * @return The gmUid.
      */
     int getGmUid();
-
-    /**
-     * <code>uint32 platform_type = 2;</code>
-     * @return The platformType.
-     */
-    int getPlatformType();
-
-    /**
-     * <code>uint32 target_uid = 8;</code>
-     * @return The targetUid.
-     */
-    int getTargetUid();
   }
   /**
    * <pre>
-   * CmdId: 20206
+   * CmdId: 6606
    * </pre>
    *
    * Protobuf type {@code PlayerLoginReq}
@@ -145,9 +145,9 @@ public final class PlayerLoginReqOuterClass {
     private PlayerLoginReq() {
       token_ = "";
       platform_ = "";
+      accountUid_ = "";
       extraBinData_ = com.google.protobuf.ByteString.EMPTY;
       countryCode_ = "";
-      accountUid_ = "";
     }
 
     @java.lang.Override
@@ -180,13 +180,7 @@ public final class PlayerLoginReqOuterClass {
             case 0:
               done = true;
               break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              token_ = s;
-              break;
-            }
-            case 16: {
+            case 24: {
 
               platformType_ = input.readUInt32();
               break;
@@ -196,9 +190,10 @@ public final class PlayerLoginReqOuterClass {
               isGuest_ = input.readBool();
               break;
             }
-            case 64: {
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              targetUid_ = input.readUInt32();
+              accountUid_ = s;
               break;
             }
             case 72: {
@@ -206,16 +201,21 @@ public final class PlayerLoginReqOuterClass {
               accountType_ = input.readUInt32();
               break;
             }
-            case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              accountUid_ = s;
-              break;
-            }
             case 98: {
               java.lang.String s = input.readStringRequireUtf8();
 
               platform_ = s;
+              break;
+            }
+            case 112: {
+
+              targetUid_ = input.readUInt32();
+              break;
+            }
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              token_ = s;
               break;
             }
             case 960: {
@@ -233,14 +233,14 @@ public final class PlayerLoginReqOuterClass {
               clientDataVersion_ = input.readUInt32();
               break;
             }
+            case 3544: {
+
+              tag_ = input.readUInt32();
+              break;
+            }
             case 5512: {
 
               gmUid_ = input.readUInt32();
-              break;
-            }
-            case 9264: {
-
-              tag_ = input.readUInt32();
               break;
             }
             case 9466: {
@@ -286,10 +286,10 @@ public final class PlayerLoginReqOuterClass {
               emu.grasscutter.net.proto.PlayerLoginReqOuterClass.PlayerLoginReq.class, emu.grasscutter.net.proto.PlayerLoginReqOuterClass.PlayerLoginReq.Builder.class);
     }
 
-    public static final int TOKEN_FIELD_NUMBER = 1;
+    public static final int TOKEN_FIELD_NUMBER = 15;
     private volatile java.lang.Object token_;
     /**
-     * <code>string token = 1;</code>
+     * <code>string token = 15;</code>
      * @return The token.
      */
     @java.lang.Override
@@ -306,7 +306,7 @@ public final class PlayerLoginReqOuterClass {
       }
     }
     /**
-     * <code>string token = 1;</code>
+     * <code>string token = 15;</code>
      * @return The bytes for token.
      */
     @java.lang.Override
@@ -362,6 +362,77 @@ public final class PlayerLoginReqOuterClass {
       }
     }
 
+    public static final int TAG_FIELD_NUMBER = 443;
+    private int tag_;
+    /**
+     * <code>uint32 tag = 443;</code>
+     * @return The tag.
+     */
+    @java.lang.Override
+    public int getTag() {
+      return tag_;
+    }
+
+    public static final int ACCOUNT_UID_FIELD_NUMBER = 8;
+    private volatile java.lang.Object accountUid_;
+    /**
+     * <code>string account_uid = 8;</code>
+     * @return The accountUid.
+     */
+    @java.lang.Override
+    public java.lang.String getAccountUid() {
+      java.lang.Object ref = accountUid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accountUid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string account_uid = 8;</code>
+     * @return The bytes for accountUid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountUidBytes() {
+      java.lang.Object ref = accountUid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accountUid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PLATFORM_TYPE_FIELD_NUMBER = 3;
+    private int platformType_;
+    /**
+     * <code>uint32 platform_type = 3;</code>
+     * @return The platformType.
+     */
+    @java.lang.Override
+    public int getPlatformType() {
+      return platformType_;
+    }
+
+    public static final int TARGET_UID_FIELD_NUMBER = 14;
+    private int targetUid_;
+    /**
+     * <code>uint32 target_uid = 14;</code>
+     * @return The targetUid.
+     */
+    @java.lang.Override
+    public int getTargetUid() {
+      return targetUid_;
+    }
+
     public static final int EXTRA_BIN_DATA_FIELD_NUMBER = 1183;
     private com.google.protobuf.ByteString extraBinData_;
     /**
@@ -405,44 +476,6 @@ public final class PlayerLoginReqOuterClass {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         countryCode_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ACCOUNT_UID_FIELD_NUMBER = 11;
-    private volatile java.lang.Object accountUid_;
-    /**
-     * <code>string account_uid = 11;</code>
-     * @return The accountUid.
-     */
-    @java.lang.Override
-    public java.lang.String getAccountUid() {
-      java.lang.Object ref = accountUid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        accountUid_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string account_uid = 11;</code>
-     * @return The bytes for accountUid.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getAccountUidBytes() {
-      java.lang.Object ref = accountUid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        accountUid_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -493,17 +526,6 @@ public final class PlayerLoginReqOuterClass {
       return loginRand_;
     }
 
-    public static final int TAG_FIELD_NUMBER = 1158;
-    private int tag_;
-    /**
-     * <code>uint32 tag = 1158;</code>
-     * @return The tag.
-     */
-    @java.lang.Override
-    public int getTag() {
-      return tag_;
-    }
-
     public static final int CLIENT_DATA_VERSION_FIELD_NUMBER = 420;
     private int clientDataVersion_;
     /**
@@ -526,28 +548,6 @@ public final class PlayerLoginReqOuterClass {
       return gmUid_;
     }
 
-    public static final int PLATFORM_TYPE_FIELD_NUMBER = 2;
-    private int platformType_;
-    /**
-     * <code>uint32 platform_type = 2;</code>
-     * @return The platformType.
-     */
-    @java.lang.Override
-    public int getPlatformType() {
-      return platformType_;
-    }
-
-    public static final int TARGET_UID_FIELD_NUMBER = 8;
-    private int targetUid_;
-    /**
-     * <code>uint32 target_uid = 8;</code>
-     * @return The targetUid.
-     */
-    @java.lang.Override
-    public int getTargetUid() {
-      return targetUid_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -562,26 +562,26 @@ public final class PlayerLoginReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, token_);
-      }
       if (platformType_ != 0) {
-        output.writeUInt32(2, platformType_);
+        output.writeUInt32(3, platformType_);
       }
       if (isGuest_ != false) {
         output.writeBool(6, isGuest_);
       }
-      if (targetUid_ != 0) {
-        output.writeUInt32(8, targetUid_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountUid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, accountUid_);
       }
       if (accountType_ != 0) {
         output.writeUInt32(9, accountType_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountUid_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, accountUid_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(platform_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, platform_);
+      }
+      if (targetUid_ != 0) {
+        output.writeUInt32(14, targetUid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, token_);
       }
       if (loginRand_ != 0L) {
         output.writeUInt64(120, loginRand_);
@@ -592,11 +592,11 @@ public final class PlayerLoginReqOuterClass {
       if (clientDataVersion_ != 0) {
         output.writeUInt32(420, clientDataVersion_);
       }
+      if (tag_ != 0) {
+        output.writeUInt32(443, tag_);
+      }
       if (gmUid_ != 0) {
         output.writeUInt32(689, gmUid_);
-      }
-      if (tag_ != 0) {
-        output.writeUInt32(1158, tag_);
       }
       if (!extraBinData_.isEmpty()) {
         output.writeBytes(1183, extraBinData_);
@@ -613,30 +613,30 @@ public final class PlayerLoginReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, token_);
-      }
       if (platformType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, platformType_);
+          .computeUInt32Size(3, platformType_);
       }
       if (isGuest_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, isGuest_);
       }
-      if (targetUid_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, targetUid_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountUid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, accountUid_);
       }
       if (accountType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(9, accountType_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountUid_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, accountUid_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(platform_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, platform_);
+      }
+      if (targetUid_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(14, targetUid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, token_);
       }
       if (loginRand_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -650,13 +650,13 @@ public final class PlayerLoginReqOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(420, clientDataVersion_);
       }
+      if (tag_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(443, tag_);
+      }
       if (gmUid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(689, gmUid_);
-      }
-      if (tag_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1158, tag_);
       }
       if (!extraBinData_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
@@ -684,12 +684,18 @@ public final class PlayerLoginReqOuterClass {
           .equals(other.getToken())) return false;
       if (!getPlatform()
           .equals(other.getPlatform())) return false;
+      if (getTag()
+          != other.getTag()) return false;
+      if (!getAccountUid()
+          .equals(other.getAccountUid())) return false;
+      if (getPlatformType()
+          != other.getPlatformType()) return false;
+      if (getTargetUid()
+          != other.getTargetUid()) return false;
       if (!getExtraBinData()
           .equals(other.getExtraBinData())) return false;
       if (!getCountryCode()
           .equals(other.getCountryCode())) return false;
-      if (!getAccountUid()
-          .equals(other.getAccountUid())) return false;
       if (getAccountType()
           != other.getAccountType()) return false;
       if (getTargetHomeOwnerUid()
@@ -698,16 +704,10 @@ public final class PlayerLoginReqOuterClass {
           != other.getIsGuest()) return false;
       if (getLoginRand()
           != other.getLoginRand()) return false;
-      if (getTag()
-          != other.getTag()) return false;
       if (getClientDataVersion()
           != other.getClientDataVersion()) return false;
       if (getGmUid()
           != other.getGmUid()) return false;
-      if (getPlatformType()
-          != other.getPlatformType()) return false;
-      if (getTargetUid()
-          != other.getTargetUid()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -723,12 +723,18 @@ public final class PlayerLoginReqOuterClass {
       hash = (53 * hash) + getToken().hashCode();
       hash = (37 * hash) + PLATFORM_FIELD_NUMBER;
       hash = (53 * hash) + getPlatform().hashCode();
+      hash = (37 * hash) + TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getTag();
+      hash = (37 * hash) + ACCOUNT_UID_FIELD_NUMBER;
+      hash = (53 * hash) + getAccountUid().hashCode();
+      hash = (37 * hash) + PLATFORM_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getPlatformType();
+      hash = (37 * hash) + TARGET_UID_FIELD_NUMBER;
+      hash = (53 * hash) + getTargetUid();
       hash = (37 * hash) + EXTRA_BIN_DATA_FIELD_NUMBER;
       hash = (53 * hash) + getExtraBinData().hashCode();
       hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getCountryCode().hashCode();
-      hash = (37 * hash) + ACCOUNT_UID_FIELD_NUMBER;
-      hash = (53 * hash) + getAccountUid().hashCode();
       hash = (37 * hash) + ACCOUNT_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getAccountType();
       hash = (37 * hash) + TARGET_HOME_OWNER_UID_FIELD_NUMBER;
@@ -739,16 +745,10 @@ public final class PlayerLoginReqOuterClass {
       hash = (37 * hash) + LOGIN_RAND_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getLoginRand());
-      hash = (37 * hash) + TAG_FIELD_NUMBER;
-      hash = (53 * hash) + getTag();
       hash = (37 * hash) + CLIENT_DATA_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getClientDataVersion();
       hash = (37 * hash) + GM_UID_FIELD_NUMBER;
       hash = (53 * hash) + getGmUid();
-      hash = (37 * hash) + PLATFORM_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getPlatformType();
-      hash = (37 * hash) + TARGET_UID_FIELD_NUMBER;
-      hash = (53 * hash) + getTargetUid();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -846,7 +846,7 @@ public final class PlayerLoginReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 20206
+     * CmdId: 6606
      * </pre>
      *
      * Protobuf type {@code PlayerLoginReq}
@@ -890,11 +890,17 @@ public final class PlayerLoginReqOuterClass {
 
         platform_ = "";
 
+        tag_ = 0;
+
+        accountUid_ = "";
+
+        platformType_ = 0;
+
+        targetUid_ = 0;
+
         extraBinData_ = com.google.protobuf.ByteString.EMPTY;
 
         countryCode_ = "";
-
-        accountUid_ = "";
 
         accountType_ = 0;
 
@@ -904,15 +910,9 @@ public final class PlayerLoginReqOuterClass {
 
         loginRand_ = 0L;
 
-        tag_ = 0;
-
         clientDataVersion_ = 0;
 
         gmUid_ = 0;
-
-        platformType_ = 0;
-
-        targetUid_ = 0;
 
         return this;
       }
@@ -942,18 +942,18 @@ public final class PlayerLoginReqOuterClass {
         emu.grasscutter.net.proto.PlayerLoginReqOuterClass.PlayerLoginReq result = new emu.grasscutter.net.proto.PlayerLoginReqOuterClass.PlayerLoginReq(this);
         result.token_ = token_;
         result.platform_ = platform_;
+        result.tag_ = tag_;
+        result.accountUid_ = accountUid_;
+        result.platformType_ = platformType_;
+        result.targetUid_ = targetUid_;
         result.extraBinData_ = extraBinData_;
         result.countryCode_ = countryCode_;
-        result.accountUid_ = accountUid_;
         result.accountType_ = accountType_;
         result.targetHomeOwnerUid_ = targetHomeOwnerUid_;
         result.isGuest_ = isGuest_;
         result.loginRand_ = loginRand_;
-        result.tag_ = tag_;
         result.clientDataVersion_ = clientDataVersion_;
         result.gmUid_ = gmUid_;
-        result.platformType_ = platformType_;
-        result.targetUid_ = targetUid_;
         onBuilt();
         return result;
       }
@@ -1010,15 +1010,24 @@ public final class PlayerLoginReqOuterClass {
           platform_ = other.platform_;
           onChanged();
         }
+        if (other.getTag() != 0) {
+          setTag(other.getTag());
+        }
+        if (!other.getAccountUid().isEmpty()) {
+          accountUid_ = other.accountUid_;
+          onChanged();
+        }
+        if (other.getPlatformType() != 0) {
+          setPlatformType(other.getPlatformType());
+        }
+        if (other.getTargetUid() != 0) {
+          setTargetUid(other.getTargetUid());
+        }
         if (other.getExtraBinData() != com.google.protobuf.ByteString.EMPTY) {
           setExtraBinData(other.getExtraBinData());
         }
         if (!other.getCountryCode().isEmpty()) {
           countryCode_ = other.countryCode_;
-          onChanged();
-        }
-        if (!other.getAccountUid().isEmpty()) {
-          accountUid_ = other.accountUid_;
           onChanged();
         }
         if (other.getAccountType() != 0) {
@@ -1033,20 +1042,11 @@ public final class PlayerLoginReqOuterClass {
         if (other.getLoginRand() != 0L) {
           setLoginRand(other.getLoginRand());
         }
-        if (other.getTag() != 0) {
-          setTag(other.getTag());
-        }
         if (other.getClientDataVersion() != 0) {
           setClientDataVersion(other.getClientDataVersion());
         }
         if (other.getGmUid() != 0) {
           setGmUid(other.getGmUid());
-        }
-        if (other.getPlatformType() != 0) {
-          setPlatformType(other.getPlatformType());
-        }
-        if (other.getTargetUid() != 0) {
-          setTargetUid(other.getTargetUid());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1079,7 +1079,7 @@ public final class PlayerLoginReqOuterClass {
 
       private java.lang.Object token_ = "";
       /**
-       * <code>string token = 1;</code>
+       * <code>string token = 15;</code>
        * @return The token.
        */
       public java.lang.String getToken() {
@@ -1095,7 +1095,7 @@ public final class PlayerLoginReqOuterClass {
         }
       }
       /**
-       * <code>string token = 1;</code>
+       * <code>string token = 15;</code>
        * @return The bytes for token.
        */
       public com.google.protobuf.ByteString
@@ -1112,7 +1112,7 @@ public final class PlayerLoginReqOuterClass {
         }
       }
       /**
-       * <code>string token = 1;</code>
+       * <code>string token = 15;</code>
        * @param value The token to set.
        * @return This builder for chaining.
        */
@@ -1127,7 +1127,7 @@ public final class PlayerLoginReqOuterClass {
         return this;
       }
       /**
-       * <code>string token = 1;</code>
+       * <code>string token = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearToken() {
@@ -1137,7 +1137,7 @@ public final class PlayerLoginReqOuterClass {
         return this;
       }
       /**
-       * <code>string token = 1;</code>
+       * <code>string token = 15;</code>
        * @param value The bytes for token to set.
        * @return This builder for chaining.
        */
@@ -1225,6 +1225,175 @@ public final class PlayerLoginReqOuterClass {
   checkByteStringIsUtf8(value);
         
         platform_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int tag_ ;
+      /**
+       * <code>uint32 tag = 443;</code>
+       * @return The tag.
+       */
+      @java.lang.Override
+      public int getTag() {
+        return tag_;
+      }
+      /**
+       * <code>uint32 tag = 443;</code>
+       * @param value The tag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTag(int value) {
+        
+        tag_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 tag = 443;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTag() {
+        
+        tag_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object accountUid_ = "";
+      /**
+       * <code>string account_uid = 8;</code>
+       * @return The accountUid.
+       */
+      public java.lang.String getAccountUid() {
+        java.lang.Object ref = accountUid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accountUid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string account_uid = 8;</code>
+       * @return The bytes for accountUid.
+       */
+      public com.google.protobuf.ByteString
+          getAccountUidBytes() {
+        java.lang.Object ref = accountUid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accountUid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string account_uid = 8;</code>
+       * @param value The accountUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountUid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        accountUid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account_uid = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccountUid() {
+        
+        accountUid_ = getDefaultInstance().getAccountUid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account_uid = 8;</code>
+       * @param value The bytes for accountUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountUidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        accountUid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int platformType_ ;
+      /**
+       * <code>uint32 platform_type = 3;</code>
+       * @return The platformType.
+       */
+      @java.lang.Override
+      public int getPlatformType() {
+        return platformType_;
+      }
+      /**
+       * <code>uint32 platform_type = 3;</code>
+       * @param value The platformType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlatformType(int value) {
+        
+        platformType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 platform_type = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlatformType() {
+        
+        platformType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int targetUid_ ;
+      /**
+       * <code>uint32 target_uid = 14;</code>
+       * @return The targetUid.
+       */
+      @java.lang.Override
+      public int getTargetUid() {
+        return targetUid_;
+      }
+      /**
+       * <code>uint32 target_uid = 14;</code>
+       * @param value The targetUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetUid(int value) {
+        
+        targetUid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 target_uid = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargetUid() {
+        
+        targetUid_ = 0;
         onChanged();
         return this;
       }
@@ -1335,82 +1504,6 @@ public final class PlayerLoginReqOuterClass {
   checkByteStringIsUtf8(value);
         
         countryCode_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object accountUid_ = "";
-      /**
-       * <code>string account_uid = 11;</code>
-       * @return The accountUid.
-       */
-      public java.lang.String getAccountUid() {
-        java.lang.Object ref = accountUid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          accountUid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string account_uid = 11;</code>
-       * @return The bytes for accountUid.
-       */
-      public com.google.protobuf.ByteString
-          getAccountUidBytes() {
-        java.lang.Object ref = accountUid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          accountUid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string account_uid = 11;</code>
-       * @param value The accountUid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAccountUid(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        accountUid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string account_uid = 11;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAccountUid() {
-        
-        accountUid_ = getDefaultInstance().getAccountUid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string account_uid = 11;</code>
-       * @param value The bytes for accountUid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAccountUidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        accountUid_ = value;
         onChanged();
         return this;
       }
@@ -1539,37 +1632,6 @@ public final class PlayerLoginReqOuterClass {
         return this;
       }
 
-      private int tag_ ;
-      /**
-       * <code>uint32 tag = 1158;</code>
-       * @return The tag.
-       */
-      @java.lang.Override
-      public int getTag() {
-        return tag_;
-      }
-      /**
-       * <code>uint32 tag = 1158;</code>
-       * @param value The tag to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTag(int value) {
-        
-        tag_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 tag = 1158;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTag() {
-        
-        tag_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int clientDataVersion_ ;
       /**
        * <code>uint32 client_data_version = 420;</code>
@@ -1628,68 +1690,6 @@ public final class PlayerLoginReqOuterClass {
       public Builder clearGmUid() {
         
         gmUid_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int platformType_ ;
-      /**
-       * <code>uint32 platform_type = 2;</code>
-       * @return The platformType.
-       */
-      @java.lang.Override
-      public int getPlatformType() {
-        return platformType_;
-      }
-      /**
-       * <code>uint32 platform_type = 2;</code>
-       * @param value The platformType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPlatformType(int value) {
-        
-        platformType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 platform_type = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPlatformType() {
-        
-        platformType_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int targetUid_ ;
-      /**
-       * <code>uint32 target_uid = 8;</code>
-       * @return The targetUid.
-       */
-      @java.lang.Override
-      public int getTargetUid() {
-        return targetUid_;
-      }
-      /**
-       * <code>uint32 target_uid = 8;</code>
-       * @param value The targetUid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTargetUid(int value) {
-        
-        targetUid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 target_uid = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTargetUid() {
-        
-        targetUid_ = 0;
         onChanged();
         return this;
       }
@@ -1761,14 +1761,14 @@ public final class PlayerLoginReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\024PlayerLoginReq.proto\"\272\002\n\016PlayerLoginRe" +
-      "q\022\r\n\005token\030\001 \001(\t\022\020\n\010platform\030\014 \001(\t\022\027\n\016ex" +
-      "tra_bin_data\030\237\t \001(\014\022\025\n\014country_code\030\356\r \001" +
-      "(\t\022\023\n\013account_uid\030\013 \001(\t\022\024\n\014account_type\030" +
-      "\t \001(\r\022\036\n\025target_home_owner_uid\030\342\001 \001(\r\022\020\n" +
-      "\010is_guest\030\006 \001(\010\022\022\n\nlogin_rand\030x \001(\004\022\014\n\003t" +
-      "ag\030\206\t \001(\r\022\034\n\023client_data_version\030\244\003 \001(\r\022" +
-      "\017\n\006gm_uid\030\261\005 \001(\r\022\025\n\rplatform_type\030\002 \001(\r\022" +
-      "\022\n\ntarget_uid\030\010 \001(\rB\033\n\031emu.grasscutter.n" +
+      "q\022\r\n\005token\030\017 \001(\t\022\020\n\010platform\030\014 \001(\t\022\014\n\003ta" +
+      "g\030\273\003 \001(\r\022\023\n\013account_uid\030\010 \001(\t\022\025\n\rplatfor" +
+      "m_type\030\003 \001(\r\022\022\n\ntarget_uid\030\016 \001(\r\022\027\n\016extr" +
+      "a_bin_data\030\237\t \001(\014\022\025\n\014country_code\030\356\r \001(\t" +
+      "\022\024\n\014account_type\030\t \001(\r\022\036\n\025target_home_ow" +
+      "ner_uid\030\342\001 \001(\r\022\020\n\010is_guest\030\006 \001(\010\022\022\n\nlogi" +
+      "n_rand\030x \001(\004\022\034\n\023client_data_version\030\244\003 \001" +
+      "(\r\022\017\n\006gm_uid\030\261\005 \001(\rB\033\n\031emu.grasscutter.n" +
       "et.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -1780,7 +1780,7 @@ public final class PlayerLoginReqOuterClass {
     internal_static_PlayerLoginReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerLoginReq_descriptor,
-        new java.lang.String[] { "Token", "Platform", "ExtraBinData", "CountryCode", "AccountUid", "AccountType", "TargetHomeOwnerUid", "IsGuest", "LoginRand", "Tag", "ClientDataVersion", "GmUid", "PlatformType", "TargetUid", });
+        new java.lang.String[] { "Token", "Platform", "Tag", "AccountUid", "PlatformType", "TargetUid", "ExtraBinData", "CountryCode", "AccountType", "TargetHomeOwnerUid", "IsGuest", "LoginRand", "ClientDataVersion", "GmUid", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

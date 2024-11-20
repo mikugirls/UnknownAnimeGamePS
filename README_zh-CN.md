@@ -4,10 +4,21 @@
 
 [English](README.md) | 简体中文
 
+## 小丑板
+琉璃服？把几乎所有东西的作者改成自己名字的傻X，把公开的东西改个名字就说是他做的。无耻又愚蠢。
+
 ## 当前功能
 
-
 * 登录
+* 战斗 (-)
+* 好友列表 (-)
+* 传送
+* 抽卡系统 (-)
+* 活动 (-)
+* 联机模式 部分 可用 (-)
+* 通过控制台生成怪物
+* 背包功能（接收物品/角色，升级物品/角色等) (-)
+* 尘歌壶 (-)
 
 # 收藏历史图表
 [![收藏历史图表](https://api.star-history.com/svg?repos=XeonSucksLAB/UnknownAnimeGamePS&type=Date)](https://star-history.com/#XeonSucksLAB/UnknownAnimeGamePS&Date)
@@ -18,37 +29,25 @@
 
 - 获取 [Java 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 - 获取 [MongoDB Community Server](https://www.mongodb.com/try/download/community)
-- 获取游戏版本 REL5.1.0（如果你没有5.1.0客户端，你可以在这里找到并下载）：
+- 获取游戏版本 REL5.2.0（如果你没有5.1.0客户端，你可以在这里找到并下载）：
 
 
 | 下载链接 | 包大小 | 解压后的包大小 | MD5校验码 |
 | :---: | :---: | :---: | :---: |
-| [GenshinImpact_5.1.0.zip.001](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240927184459_CVopfb3tD4Zi3As6/GenshinImpact_5.1.0.zip.001) | 10.0 GB | 20.0 GB | cbe2934260fda10ab8cdaca80ef69cb3 |
-| [GenshinImpact_5.1.0.zip.002](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240927184459_CVopfb3tD4Zi3As6/GenshinImpact_5.1.0.zip.002) | 10.0 GB | 20.0 GB | df706bb5e83dde4d3df7276a1210a8fb |
-| [GenshinImpact_5.1.0.zip.003](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240927184459_CVopfb3tD4Zi3As6/GenshinImpact_5.1.0.zip.003) | 10.0 GB | 20.0 GB | dd7062a4abde83f02f184fe081eb2006 |
-| [GenshinImpact_5.1.0.zip.004](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240927184459_CVopfb3tD4Zi3As6/GenshinImpact_5.1.0.zip.004) | 10.0 GB | 20.0 GB | 39f014a760e27f77abed1989739c74c6 |
-| [GenshinImpact_5.1.0.zip.005](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240927184459_CVopfb3tD4Zi3As6/GenshinImpact_5.1.0.zip.005) | 10.0 GB | 20.0 GB | e3beb938f521be5a74431716394baee3 |
-| [GenshinImpact_5.1.0.zip.006](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240927184459_CVopfb3tD4Zi3As6/GenshinImpact_5.1.0.zip.006) | 10.0 GB | 20.0 GB | f59a086e986cce9f9e98e2d3c44212c8 |
-| [GenshinImpact_5.1.0.zip.007](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240927184459_CVopfb3tD4Zi3As6/GenshinImpact_5.1.0.zip.007) | 5.94 GB | 11.89 GB | 0e165aec640ca7025f9d52b0f53a4223 |
-| [Audio_Chinese_5.1.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240927184459_CVopfb3tD4Zi3As6/Audio_Chinese_5.1.0.zip) | 13.09 GB | 26.19 GB | 5c2e8a5e8a79a2e04a43e3a9d6df1ade |
-| [Audio_English(US)_5.1.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240927184459_CVopfb3tD4Zi3As6/Audio_English(US)_5.1.0.zip) | 15.09 GB | 30.20 GB | 2504bd3606681c20cbdb5f82e8ca361b |
-| [Audio_Korean_5.1.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240927184459_CVopfb3tD4Zi3As6/Audio_Korean_5.1.0.zip) | 12.84 GB | 25.70 GB | 89f4668220ceaba401244c5d506defeb |
-| [Audio_Japanese_5.1.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240927184459_CVopfb3tD4Zi3As6/Audio_Japanese_5.1.0.zip) | 17.00 GB | 34.02 GB | b2a2d965ccc36b1c583381cf4b3962e9 |
+| [GenshinImpact_5.2.0.zip.001](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20241108173711_97p3DLcQqGoVFVR0/GenshinImpact_5.2.0.zip.001) | 10.0 GB | 20.0 GB | 651a72b1adb3bb5be28dcffded9ee7ec |
+| [GenshinImpact_5.2.0.zip.002](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20241108173711_97p3DLcQqGoVFVR0/GenshinImpact_5.2.0.zip.002) | 10.0 GB | 20.0 GB | ecfcb0aa4b403608aa0089e8cbc0c618 |
+| [GenshinImpact_5.2.0.zip.003](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20241108173711_97p3DLcQqGoVFVR0/GenshinImpact_5.2.0.zip.003) | 10.0 GB | 20.0 GB | 5bac8cd01f87d13dd3e20cbf897731d9 |
+| [GenshinImpact_5.2.0.zip.004](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20241108173711_97p3DLcQqGoVFVR0/GenshinImpact_5.2.0.zip.004) | 10.0 GB | 20.0 GB | 84501620dded6000f758bfc4bde68d50 |
+| [GenshinImpact_5.2.0.zip.005](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20241108173711_97p3DLcQqGoVFVR0/GenshinImpact_5.2.0.zip.005) | 10.0 GB | 20.0 GB | 2d47ee68d07fd698c02001311998498f |
+| [GenshinImpact_5.2.0.zip.006](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20241108173711_97p3DLcQqGoVFVR0/GenshinImpact_5.2.0.zip.006) | 10.0 GB | 20.0 GB | 8246d93ee1f93ed787bf87314220ed4e |
+| [GenshinImpact_5.2.0.zip.007](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20241108173711_97p3DLcQqGoVFVR0/GenshinImpact_5.2.0.zip.007) | 7.24 GB | 14.49 GB | fda38b6c9a5f746829abd8b561f51f54 |
+| [Audio_Chinese_5.2.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20241108173711_97p3DLcQqGoVFVR0/Audio_Chinese_5.2.0.zip) | 13.42 GB | 26.84 GB | 10dd6595c3687dec572afdc329c47eec |
+| [Audio_English(US)_5.2.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20241108173711_97p3DLcQqGoVFVR0/Audio_English(US)_5.2.0.zip) | 15.46 GB | 30.93 GB | c67d7e98f823afce67fe662f76d27388 |
+| [Audio_Korean_5.2.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20241108173711_97p3DLcQqGoVFVR0/Audio_Korean_5.0.0.zip) | 13.17 GB | 26.35 GB | 071cfaab116ac1578fb6d755c34634e0 |
+| [Audio_Japanese_5.2.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20241108173711_97p3DLcQqGoVFVR0/Audio_Japanese_5.0.0.zip) | 17.41 GB | 34.84 GB | 285fba0cf723fc0ec033944caa1ada5c |
 
 
-- 或者获取 5.0.0 -> 5.1.0 hdiff:
-
-
-| 下载链接 | 包大小 | 解压后的包大小 | MD5校验码 |
-| :---: | :---: | :---: | :---: |
-| [game_5.0.0_5.1.0_hdiff_YqcpfTRBIuOIwHrO.zip](https://autopatchhk.yuanshen.com/client_app/update/hk4e_global/game_5.0.0_5.1.0_hdiff_YqcpfTRBIuOIwHrO.zip) | 18.00 GB | 36.66 GB | 3d628fcde7aaf5b242e253188885ef8d |
-| [audio_ko-kr_5.0.0_5.1.0_hdiff_PumQPsFuEgvDnZyX.zip](https://autopatchhk.yuanshen.com/client_app/update/hk4e_global/audio_ko-kr_5.0.0_5.1.0_hdiff_PumQPsFuEgvDnZyX.zip) | 0.51 GB | 1.12 GB | 0d77474fe49e46cdfc20298034501019 |
-| [audio_ja-jp_5.0.0_5.1.0_hdiff_cSIWEmsNoqluMIrF.zip](https://autopatchhk.yuanshen.com/client_app/update/hk4e_global/audio_ja-jp_5.0.0_5.1.0_hdiff_cSIWEmsNoqluMIrF.zip) | 0.59 GB | 1.34 GB | de00c4d5d02dead7b8e80c68ab57db17 |
-| [audio_zh-cn_5.0.0_5.1.0_hdiff_bktSOAPsrWSJHOII.zip](https://autopatchhk.yuanshen.com/client_app/update/hk4e_global/audio_zh-cn_5.0.0_5.1.0_hdiff_bktSOAPsrWSJHOII.zip) | 0.54 GB | 1.16 GB | 1e988fbd3a6854e885564e3cca56fb65 |
-| [audio_en-us_5.0.0_5.1.0_hdiff_jRxUUsOrikPdkOPL.zip](https://autopatchhk.yuanshen.com/client_app/update/hk4e_global/audio_en-us_5.0.0_5.1.0_hdiff_jRxUUsOrikPdkOPL.zip) | 0.51 GB | 1.11 GB | 501590a0aa8a67e0101e827be5c16cef |
-
-
-- 从[这里](https://watchandy.me/5.0.0/version.dll)下载补丁。 --当前补丁还未更新至5.1.0版本
+- 从[这里](https://watchandy.me/5.2.0/version.dll)下载补丁。
 - 将 `version.dll` 放入游戏客户端的文件夹中。
 
 ## 搭建服务器

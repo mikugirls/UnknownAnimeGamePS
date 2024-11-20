@@ -19,28 +19,34 @@ public final class ActivityInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <pre>
-     * 11
-     * </pre>
-     *
+     * <code>uint32 activity_id = 11;</code>
+     * @return The activityId.
+     */
+    int getActivityId();
+
+    /**
+     * <code>bool is_finished = 4;</code>
+     * @return The isFinished.
+     */
+    boolean getIsFinished();
+
+    /**
+     * <code>uint32 schedule_id = 2;</code>
+     * @return The scheduleId.
+     */
+    int getScheduleId();
+
+    /**
      * <code>repeated uint32 meet_cond_list = 1;</code>
      * @return A list containing the meetCondList.
      */
     java.util.List<java.lang.Integer> getMeetCondListList();
     /**
-     * <pre>
-     * 11
-     * </pre>
-     *
      * <code>repeated uint32 meet_cond_list = 1;</code>
      * @return The count of meetCondList.
      */
     int getMeetCondListCount();
     /**
-     * <pre>
-     * 11
-     * </pre>
-     *
      * <code>repeated uint32 meet_cond_list = 1;</code>
      * @param index The index of the element to return.
      * @return The meetCondList at the given index.
@@ -48,7 +54,7 @@ public final class ActivityInfoOuterClass {
     int getMeetCondList(int index);
 
     /**
-     * <code>uint32 end_time = 4;</code>
+     * <code>uint32 end_time = 5;</code>
      * @return The endTime.
      */
     int getEndTime();
@@ -58,12 +64,6 @@ public final class ActivityInfoOuterClass {
      * @return The beginTime.
      */
     int getBeginTime();
-
-    /**
-     * <code>bool is_finished = 7;</code>
-     * @return The isFinished.
-     */
-    boolean getIsFinished();
 
     /**
      * <code>repeated .ActivityWatcherInfo watcher_info_list = 10;</code>
@@ -90,51 +90,27 @@ public final class ActivityInfoOuterClass {
         int index);
 
     /**
-     * <pre>
-     * 1
-     * </pre>
-     *
-     * <code>repeated uint32 expire_cond_list = 11;</code>
+     * <code>repeated uint32 expire_cond_list = 12;</code>
      * @return A list containing the expireCondList.
      */
     java.util.List<java.lang.Integer> getExpireCondListList();
     /**
-     * <pre>
-     * 1
-     * </pre>
-     *
-     * <code>repeated uint32 expire_cond_list = 11;</code>
+     * <code>repeated uint32 expire_cond_list = 12;</code>
      * @return The count of expireCondList.
      */
     int getExpireCondListCount();
     /**
-     * <pre>
-     * 1
-     * </pre>
-     *
-     * <code>repeated uint32 expire_cond_list = 11;</code>
+     * <code>repeated uint32 expire_cond_list = 12;</code>
      * @param index The index of the element to return.
      * @return The expireCondList at the given index.
      */
     int getExpireCondList(int index);
 
     /**
-     * <code>uint32 schedule_id = 12;</code>
-     * @return The scheduleId.
-     */
-    int getScheduleId();
-
-    /**
      * <code>uint32 activity_type = 14;</code>
      * @return The activityType.
      */
     int getActivityType();
-
-    /**
-     * <code>uint32 activity_id = 15;</code>
-     * @return The activityId.
-     */
-    int getActivityId();
 
     /**
      * <code>uint32 cur_score = 63;</code>
@@ -346,7 +322,17 @@ public final class ActivityInfoOuterClass {
               input.popLimit(limit);
               break;
             }
+            case 16: {
+
+              scheduleId_ = input.readUInt32();
+              break;
+            }
             case 32: {
+
+              isFinished_ = input.readBool();
+              break;
+            }
+            case 40: {
 
               endTime_ = input.readUInt32();
               break;
@@ -354,11 +340,6 @@ public final class ActivityInfoOuterClass {
             case 48: {
 
               beginTime_ = input.readUInt32();
-              break;
-            }
-            case 56: {
-
-              isFinished_ = input.readBool();
               break;
             }
             case 82: {
@@ -371,6 +352,11 @@ public final class ActivityInfoOuterClass {
               break;
             }
             case 88: {
+
+              activityId_ = input.readUInt32();
+              break;
+            }
+            case 96: {
               if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 expireCondList_ = newIntList();
                 mutable_bitField0_ |= 0x00000004;
@@ -378,7 +364,7 @@ public final class ActivityInfoOuterClass {
               expireCondList_.addInt(input.readUInt32());
               break;
             }
-            case 90: {
+            case 98: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
@@ -391,19 +377,9 @@ public final class ActivityInfoOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 96: {
-
-              scheduleId_ = input.readUInt32();
-              break;
-            }
             case 112: {
 
               activityType_ = input.readUInt32();
-              break;
-            }
-            case 120: {
-
-              activityId_ = input.readUInt32();
               break;
             }
             case 504: {
@@ -586,13 +562,42 @@ public final class ActivityInfoOuterClass {
           detailCase_);
     }
 
+    public static final int ACTIVITY_ID_FIELD_NUMBER = 11;
+    private int activityId_;
+    /**
+     * <code>uint32 activity_id = 11;</code>
+     * @return The activityId.
+     */
+    @java.lang.Override
+    public int getActivityId() {
+      return activityId_;
+    }
+
+    public static final int IS_FINISHED_FIELD_NUMBER = 4;
+    private boolean isFinished_;
+    /**
+     * <code>bool is_finished = 4;</code>
+     * @return The isFinished.
+     */
+    @java.lang.Override
+    public boolean getIsFinished() {
+      return isFinished_;
+    }
+
+    public static final int SCHEDULE_ID_FIELD_NUMBER = 2;
+    private int scheduleId_;
+    /**
+     * <code>uint32 schedule_id = 2;</code>
+     * @return The scheduleId.
+     */
+    @java.lang.Override
+    public int getScheduleId() {
+      return scheduleId_;
+    }
+
     public static final int MEET_COND_LIST_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.IntList meetCondList_;
     /**
-     * <pre>
-     * 11
-     * </pre>
-     *
      * <code>repeated uint32 meet_cond_list = 1;</code>
      * @return A list containing the meetCondList.
      */
@@ -602,10 +607,6 @@ public final class ActivityInfoOuterClass {
       return meetCondList_;
     }
     /**
-     * <pre>
-     * 11
-     * </pre>
-     *
      * <code>repeated uint32 meet_cond_list = 1;</code>
      * @return The count of meetCondList.
      */
@@ -613,10 +614,6 @@ public final class ActivityInfoOuterClass {
       return meetCondList_.size();
     }
     /**
-     * <pre>
-     * 11
-     * </pre>
-     *
      * <code>repeated uint32 meet_cond_list = 1;</code>
      * @param index The index of the element to return.
      * @return The meetCondList at the given index.
@@ -626,10 +623,10 @@ public final class ActivityInfoOuterClass {
     }
     private int meetCondListMemoizedSerializedSize = -1;
 
-    public static final int END_TIME_FIELD_NUMBER = 4;
+    public static final int END_TIME_FIELD_NUMBER = 5;
     private int endTime_;
     /**
-     * <code>uint32 end_time = 4;</code>
+     * <code>uint32 end_time = 5;</code>
      * @return The endTime.
      */
     @java.lang.Override
@@ -646,17 +643,6 @@ public final class ActivityInfoOuterClass {
     @java.lang.Override
     public int getBeginTime() {
       return beginTime_;
-    }
-
-    public static final int IS_FINISHED_FIELD_NUMBER = 7;
-    private boolean isFinished_;
-    /**
-     * <code>bool is_finished = 7;</code>
-     * @return The isFinished.
-     */
-    @java.lang.Override
-    public boolean getIsFinished() {
-      return isFinished_;
     }
 
     public static final int WATCHER_INFO_LIST_FIELD_NUMBER = 10;
@@ -699,14 +685,10 @@ public final class ActivityInfoOuterClass {
       return watcherInfoList_.get(index);
     }
 
-    public static final int EXPIRE_COND_LIST_FIELD_NUMBER = 11;
+    public static final int EXPIRE_COND_LIST_FIELD_NUMBER = 12;
     private com.google.protobuf.Internal.IntList expireCondList_;
     /**
-     * <pre>
-     * 1
-     * </pre>
-     *
-     * <code>repeated uint32 expire_cond_list = 11;</code>
+     * <code>repeated uint32 expire_cond_list = 12;</code>
      * @return A list containing the expireCondList.
      */
     @java.lang.Override
@@ -715,22 +697,14 @@ public final class ActivityInfoOuterClass {
       return expireCondList_;
     }
     /**
-     * <pre>
-     * 1
-     * </pre>
-     *
-     * <code>repeated uint32 expire_cond_list = 11;</code>
+     * <code>repeated uint32 expire_cond_list = 12;</code>
      * @return The count of expireCondList.
      */
     public int getExpireCondListCount() {
       return expireCondList_.size();
     }
     /**
-     * <pre>
-     * 1
-     * </pre>
-     *
-     * <code>repeated uint32 expire_cond_list = 11;</code>
+     * <code>repeated uint32 expire_cond_list = 12;</code>
      * @param index The index of the element to return.
      * @return The expireCondList at the given index.
      */
@@ -738,17 +712,6 @@ public final class ActivityInfoOuterClass {
       return expireCondList_.getInt(index);
     }
     private int expireCondListMemoizedSerializedSize = -1;
-
-    public static final int SCHEDULE_ID_FIELD_NUMBER = 12;
-    private int scheduleId_;
-    /**
-     * <code>uint32 schedule_id = 12;</code>
-     * @return The scheduleId.
-     */
-    @java.lang.Override
-    public int getScheduleId() {
-      return scheduleId_;
-    }
 
     public static final int ACTIVITY_TYPE_FIELD_NUMBER = 14;
     private int activityType_;
@@ -759,17 +722,6 @@ public final class ActivityInfoOuterClass {
     @java.lang.Override
     public int getActivityType() {
       return activityType_;
-    }
-
-    public static final int ACTIVITY_ID_FIELD_NUMBER = 15;
-    private int activityId_;
-    /**
-     * <code>uint32 activity_id = 15;</code>
-     * @return The activityId.
-     */
-    @java.lang.Override
-    public int getActivityId() {
-      return activityId_;
     }
 
     public static final int CUR_SCORE_FIELD_NUMBER = 63;
@@ -1077,33 +1029,33 @@ public final class ActivityInfoOuterClass {
       for (int i = 0; i < meetCondList_.size(); i++) {
         output.writeUInt32NoTag(meetCondList_.getInt(i));
       }
+      if (scheduleId_ != 0) {
+        output.writeUInt32(2, scheduleId_);
+      }
+      if (isFinished_ != false) {
+        output.writeBool(4, isFinished_);
+      }
       if (endTime_ != 0) {
-        output.writeUInt32(4, endTime_);
+        output.writeUInt32(5, endTime_);
       }
       if (beginTime_ != 0) {
         output.writeUInt32(6, beginTime_);
       }
-      if (isFinished_ != false) {
-        output.writeBool(7, isFinished_);
-      }
       for (int i = 0; i < watcherInfoList_.size(); i++) {
         output.writeMessage(10, watcherInfoList_.get(i));
       }
+      if (activityId_ != 0) {
+        output.writeUInt32(11, activityId_);
+      }
       if (getExpireCondListList().size() > 0) {
-        output.writeUInt32NoTag(90);
+        output.writeUInt32NoTag(98);
         output.writeUInt32NoTag(expireCondListMemoizedSerializedSize);
       }
       for (int i = 0; i < expireCondList_.size(); i++) {
         output.writeUInt32NoTag(expireCondList_.getInt(i));
       }
-      if (scheduleId_ != 0) {
-        output.writeUInt32(12, scheduleId_);
-      }
       if (activityType_ != 0) {
         output.writeUInt32(14, activityType_);
-      }
-      if (activityId_ != 0) {
-        output.writeUInt32(15, activityId_);
       }
       if (curScore_ != 0) {
         output.writeUInt32(63, curScore_);
@@ -1159,21 +1111,29 @@ public final class ActivityInfoOuterClass {
         }
         meetCondListMemoizedSerializedSize = dataSize;
       }
+      if (scheduleId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, scheduleId_);
+      }
+      if (isFinished_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, isFinished_);
+      }
       if (endTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, endTime_);
+          .computeUInt32Size(5, endTime_);
       }
       if (beginTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(6, beginTime_);
       }
-      if (isFinished_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, isFinished_);
-      }
       for (int i = 0; i < watcherInfoList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, watcherInfoList_.get(i));
+      }
+      if (activityId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(11, activityId_);
       }
       {
         int dataSize = 0;
@@ -1189,17 +1149,9 @@ public final class ActivityInfoOuterClass {
         }
         expireCondListMemoizedSerializedSize = dataSize;
       }
-      if (scheduleId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, scheduleId_);
-      }
       if (activityType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(14, activityType_);
-      }
-      if (activityId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, activityId_);
       }
       if (curScore_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -1266,24 +1218,24 @@ public final class ActivityInfoOuterClass {
       }
       emu.grasscutter.net.proto.ActivityInfoOuterClass.ActivityInfo other = (emu.grasscutter.net.proto.ActivityInfoOuterClass.ActivityInfo) obj;
 
+      if (getActivityId()
+          != other.getActivityId()) return false;
+      if (getIsFinished()
+          != other.getIsFinished()) return false;
+      if (getScheduleId()
+          != other.getScheduleId()) return false;
       if (!getMeetCondListList()
           .equals(other.getMeetCondListList())) return false;
       if (getEndTime()
           != other.getEndTime()) return false;
       if (getBeginTime()
           != other.getBeginTime()) return false;
-      if (getIsFinished()
-          != other.getIsFinished()) return false;
       if (!getWatcherInfoListList()
           .equals(other.getWatcherInfoListList())) return false;
       if (!getExpireCondListList()
           .equals(other.getExpireCondListList())) return false;
-      if (getScheduleId()
-          != other.getScheduleId()) return false;
       if (getActivityType()
           != other.getActivityType()) return false;
-      if (getActivityId()
-          != other.getActivityId()) return false;
       if (getCurScore()
           != other.getCurScore()) return false;
       if (getFirstDayStartTime()
@@ -1316,6 +1268,13 @@ public final class ActivityInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTIVITY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getActivityId();
+      hash = (37 * hash) + IS_FINISHED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsFinished());
+      hash = (37 * hash) + SCHEDULE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getScheduleId();
       if (getMeetCondListCount() > 0) {
         hash = (37 * hash) + MEET_COND_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getMeetCondListList().hashCode();
@@ -1324,9 +1283,6 @@ public final class ActivityInfoOuterClass {
       hash = (53 * hash) + getEndTime();
       hash = (37 * hash) + BEGIN_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getBeginTime();
-      hash = (37 * hash) + IS_FINISHED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsFinished());
       if (getWatcherInfoListCount() > 0) {
         hash = (37 * hash) + WATCHER_INFO_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getWatcherInfoListList().hashCode();
@@ -1335,12 +1291,8 @@ public final class ActivityInfoOuterClass {
         hash = (37 * hash) + EXPIRE_COND_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getExpireCondListList().hashCode();
       }
-      hash = (37 * hash) + SCHEDULE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getScheduleId();
       hash = (37 * hash) + ACTIVITY_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getActivityType();
-      hash = (37 * hash) + ACTIVITY_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getActivityId();
       hash = (37 * hash) + CUR_SCORE_FIELD_NUMBER;
       hash = (53 * hash) + getCurScore();
       hash = (37 * hash) + FIRST_DAY_START_TIME_FIELD_NUMBER;
@@ -1530,13 +1482,17 @@ public final class ActivityInfoOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        activityId_ = 0;
+
+        isFinished_ = false;
+
+        scheduleId_ = 0;
+
         meetCondList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
         endTime_ = 0;
 
         beginTime_ = 0;
-
-        isFinished_ = false;
 
         if (watcherInfoListBuilder_ == null) {
           watcherInfoList_ = java.util.Collections.emptyList();
@@ -1546,11 +1502,7 @@ public final class ActivityInfoOuterClass {
         }
         expireCondList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000004);
-        scheduleId_ = 0;
-
         activityType_ = 0;
-
-        activityId_ = 0;
 
         curScore_ = 0;
 
@@ -1595,6 +1547,9 @@ public final class ActivityInfoOuterClass {
       public emu.grasscutter.net.proto.ActivityInfoOuterClass.ActivityInfo buildPartial() {
         emu.grasscutter.net.proto.ActivityInfoOuterClass.ActivityInfo result = new emu.grasscutter.net.proto.ActivityInfoOuterClass.ActivityInfo(this);
         int from_bitField0_ = bitField0_;
+        result.activityId_ = activityId_;
+        result.isFinished_ = isFinished_;
+        result.scheduleId_ = scheduleId_;
         if (((bitField0_ & 0x00000001) != 0)) {
           meetCondList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -1602,7 +1557,6 @@ public final class ActivityInfoOuterClass {
         result.meetCondList_ = meetCondList_;
         result.endTime_ = endTime_;
         result.beginTime_ = beginTime_;
-        result.isFinished_ = isFinished_;
         if (watcherInfoListBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0)) {
             watcherInfoList_ = java.util.Collections.unmodifiableList(watcherInfoList_);
@@ -1617,9 +1571,7 @@ public final class ActivityInfoOuterClass {
           bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.expireCondList_ = expireCondList_;
-        result.scheduleId_ = scheduleId_;
         result.activityType_ = activityType_;
-        result.activityId_ = activityId_;
         result.curScore_ = curScore_;
         result.firstDayStartTime_ = firstDayStartTime_;
         if (((bitField0_ & 0x00000008) != 0)) {
@@ -1696,6 +1648,15 @@ public final class ActivityInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.ActivityInfoOuterClass.ActivityInfo other) {
         if (other == emu.grasscutter.net.proto.ActivityInfoOuterClass.ActivityInfo.getDefaultInstance()) return this;
+        if (other.getActivityId() != 0) {
+          setActivityId(other.getActivityId());
+        }
+        if (other.getIsFinished() != false) {
+          setIsFinished(other.getIsFinished());
+        }
+        if (other.getScheduleId() != 0) {
+          setScheduleId(other.getScheduleId());
+        }
         if (!other.meetCondList_.isEmpty()) {
           if (meetCondList_.isEmpty()) {
             meetCondList_ = other.meetCondList_;
@@ -1711,9 +1672,6 @@ public final class ActivityInfoOuterClass {
         }
         if (other.getBeginTime() != 0) {
           setBeginTime(other.getBeginTime());
-        }
-        if (other.getIsFinished() != false) {
-          setIsFinished(other.getIsFinished());
         }
         if (watcherInfoListBuilder_ == null) {
           if (!other.watcherInfoList_.isEmpty()) {
@@ -1751,14 +1709,8 @@ public final class ActivityInfoOuterClass {
           }
           onChanged();
         }
-        if (other.getScheduleId() != 0) {
-          setScheduleId(other.getScheduleId());
-        }
         if (other.getActivityType() != 0) {
           setActivityType(other.getActivityType());
-        }
-        if (other.getActivityId() != 0) {
-          setActivityId(other.getActivityId());
         }
         if (other.getCurScore() != 0) {
           setCurScore(other.getCurScore());
@@ -1860,6 +1812,99 @@ public final class ActivityInfoOuterClass {
 
       private int bitField0_;
 
+      private int activityId_ ;
+      /**
+       * <code>uint32 activity_id = 11;</code>
+       * @return The activityId.
+       */
+      @java.lang.Override
+      public int getActivityId() {
+        return activityId_;
+      }
+      /**
+       * <code>uint32 activity_id = 11;</code>
+       * @param value The activityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActivityId(int value) {
+        
+        activityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 activity_id = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearActivityId() {
+        
+        activityId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isFinished_ ;
+      /**
+       * <code>bool is_finished = 4;</code>
+       * @return The isFinished.
+       */
+      @java.lang.Override
+      public boolean getIsFinished() {
+        return isFinished_;
+      }
+      /**
+       * <code>bool is_finished = 4;</code>
+       * @param value The isFinished to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsFinished(boolean value) {
+        
+        isFinished_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_finished = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsFinished() {
+        
+        isFinished_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int scheduleId_ ;
+      /**
+       * <code>uint32 schedule_id = 2;</code>
+       * @return The scheduleId.
+       */
+      @java.lang.Override
+      public int getScheduleId() {
+        return scheduleId_;
+      }
+      /**
+       * <code>uint32 schedule_id = 2;</code>
+       * @param value The scheduleId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScheduleId(int value) {
+        
+        scheduleId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 schedule_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScheduleId() {
+        
+        scheduleId_ = 0;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.Internal.IntList meetCondList_ = emptyIntList();
       private void ensureMeetCondListIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
@@ -1868,10 +1913,6 @@ public final class ActivityInfoOuterClass {
          }
       }
       /**
-       * <pre>
-       * 11
-       * </pre>
-       *
        * <code>repeated uint32 meet_cond_list = 1;</code>
        * @return A list containing the meetCondList.
        */
@@ -1881,10 +1922,6 @@ public final class ActivityInfoOuterClass {
                  java.util.Collections.unmodifiableList(meetCondList_) : meetCondList_;
       }
       /**
-       * <pre>
-       * 11
-       * </pre>
-       *
        * <code>repeated uint32 meet_cond_list = 1;</code>
        * @return The count of meetCondList.
        */
@@ -1892,10 +1929,6 @@ public final class ActivityInfoOuterClass {
         return meetCondList_.size();
       }
       /**
-       * <pre>
-       * 11
-       * </pre>
-       *
        * <code>repeated uint32 meet_cond_list = 1;</code>
        * @param index The index of the element to return.
        * @return The meetCondList at the given index.
@@ -1904,10 +1937,6 @@ public final class ActivityInfoOuterClass {
         return meetCondList_.getInt(index);
       }
       /**
-       * <pre>
-       * 11
-       * </pre>
-       *
        * <code>repeated uint32 meet_cond_list = 1;</code>
        * @param index The index to set the value at.
        * @param value The meetCondList to set.
@@ -1921,10 +1950,6 @@ public final class ActivityInfoOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * 11
-       * </pre>
-       *
        * <code>repeated uint32 meet_cond_list = 1;</code>
        * @param value The meetCondList to add.
        * @return This builder for chaining.
@@ -1936,10 +1961,6 @@ public final class ActivityInfoOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * 11
-       * </pre>
-       *
        * <code>repeated uint32 meet_cond_list = 1;</code>
        * @param values The meetCondList to add.
        * @return This builder for chaining.
@@ -1953,10 +1974,6 @@ public final class ActivityInfoOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * 11
-       * </pre>
-       *
        * <code>repeated uint32 meet_cond_list = 1;</code>
        * @return This builder for chaining.
        */
@@ -1969,7 +1986,7 @@ public final class ActivityInfoOuterClass {
 
       private int endTime_ ;
       /**
-       * <code>uint32 end_time = 4;</code>
+       * <code>uint32 end_time = 5;</code>
        * @return The endTime.
        */
       @java.lang.Override
@@ -1977,7 +1994,7 @@ public final class ActivityInfoOuterClass {
         return endTime_;
       }
       /**
-       * <code>uint32 end_time = 4;</code>
+       * <code>uint32 end_time = 5;</code>
        * @param value The endTime to set.
        * @return This builder for chaining.
        */
@@ -1988,7 +2005,7 @@ public final class ActivityInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 end_time = 4;</code>
+       * <code>uint32 end_time = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearEndTime() {
@@ -2025,37 +2042,6 @@ public final class ActivityInfoOuterClass {
       public Builder clearBeginTime() {
         
         beginTime_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean isFinished_ ;
-      /**
-       * <code>bool is_finished = 7;</code>
-       * @return The isFinished.
-       */
-      @java.lang.Override
-      public boolean getIsFinished() {
-        return isFinished_;
-      }
-      /**
-       * <code>bool is_finished = 7;</code>
-       * @param value The isFinished to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsFinished(boolean value) {
-        
-        isFinished_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_finished = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsFinished() {
-        
-        isFinished_ = false;
         onChanged();
         return this;
       }
@@ -2308,11 +2294,7 @@ public final class ActivityInfoOuterClass {
          }
       }
       /**
-       * <pre>
-       * 1
-       * </pre>
-       *
-       * <code>repeated uint32 expire_cond_list = 11;</code>
+       * <code>repeated uint32 expire_cond_list = 12;</code>
        * @return A list containing the expireCondList.
        */
       public java.util.List<java.lang.Integer>
@@ -2321,22 +2303,14 @@ public final class ActivityInfoOuterClass {
                  java.util.Collections.unmodifiableList(expireCondList_) : expireCondList_;
       }
       /**
-       * <pre>
-       * 1
-       * </pre>
-       *
-       * <code>repeated uint32 expire_cond_list = 11;</code>
+       * <code>repeated uint32 expire_cond_list = 12;</code>
        * @return The count of expireCondList.
        */
       public int getExpireCondListCount() {
         return expireCondList_.size();
       }
       /**
-       * <pre>
-       * 1
-       * </pre>
-       *
-       * <code>repeated uint32 expire_cond_list = 11;</code>
+       * <code>repeated uint32 expire_cond_list = 12;</code>
        * @param index The index of the element to return.
        * @return The expireCondList at the given index.
        */
@@ -2344,11 +2318,7 @@ public final class ActivityInfoOuterClass {
         return expireCondList_.getInt(index);
       }
       /**
-       * <pre>
-       * 1
-       * </pre>
-       *
-       * <code>repeated uint32 expire_cond_list = 11;</code>
+       * <code>repeated uint32 expire_cond_list = 12;</code>
        * @param index The index to set the value at.
        * @param value The expireCondList to set.
        * @return This builder for chaining.
@@ -2361,11 +2331,7 @@ public final class ActivityInfoOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * 1
-       * </pre>
-       *
-       * <code>repeated uint32 expire_cond_list = 11;</code>
+       * <code>repeated uint32 expire_cond_list = 12;</code>
        * @param value The expireCondList to add.
        * @return This builder for chaining.
        */
@@ -2376,11 +2342,7 @@ public final class ActivityInfoOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * 1
-       * </pre>
-       *
-       * <code>repeated uint32 expire_cond_list = 11;</code>
+       * <code>repeated uint32 expire_cond_list = 12;</code>
        * @param values The expireCondList to add.
        * @return This builder for chaining.
        */
@@ -2393,47 +2355,12 @@ public final class ActivityInfoOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * 1
-       * </pre>
-       *
-       * <code>repeated uint32 expire_cond_list = 11;</code>
+       * <code>repeated uint32 expire_cond_list = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearExpireCondList() {
         expireCondList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-        return this;
-      }
-
-      private int scheduleId_ ;
-      /**
-       * <code>uint32 schedule_id = 12;</code>
-       * @return The scheduleId.
-       */
-      @java.lang.Override
-      public int getScheduleId() {
-        return scheduleId_;
-      }
-      /**
-       * <code>uint32 schedule_id = 12;</code>
-       * @param value The scheduleId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setScheduleId(int value) {
-        
-        scheduleId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 schedule_id = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearScheduleId() {
-        
-        scheduleId_ = 0;
         onChanged();
         return this;
       }
@@ -2465,37 +2392,6 @@ public final class ActivityInfoOuterClass {
       public Builder clearActivityType() {
         
         activityType_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int activityId_ ;
-      /**
-       * <code>uint32 activity_id = 15;</code>
-       * @return The activityId.
-       */
-      @java.lang.Override
-      public int getActivityId() {
-        return activityId_;
-      }
-      /**
-       * <code>uint32 activity_id = 15;</code>
-       * @param value The activityId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setActivityId(int value) {
-        
-        activityId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 activity_id = 15;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearActivityId() {
-        
-        activityId_ = 0;
         onChanged();
         return this;
       }
@@ -3424,12 +3320,12 @@ public final class ActivityInfoOuterClass {
       "initeInfo.proto\032\023ToyBattleInfo.proto\032\027Ph" +
       "otoUnderseaInfo.proto\032\030FontaineGatherInf" +
       "o.proto\032\026GcgPvePuzzleInfo.proto\"\253\005\n\014Acti" +
-      "vityInfo\022\026\n\016meet_cond_list\030\001 \003(\r\022\020\n\010end_" +
-      "time\030\004 \001(\r\022\022\n\nbegin_time\030\006 \001(\r\022\023\n\013is_fin" +
-      "ished\030\007 \001(\010\022/\n\021watcher_info_list\030\n \003(\0132\024" +
-      ".ActivityWatcherInfo\022\030\n\020expire_cond_list" +
-      "\030\013 \003(\r\022\023\n\013schedule_id\030\014 \001(\r\022\025\n\ractivity_" +
-      "type\030\016 \001(\r\022\023\n\013activity_id\030\017 \001(\r\022\021\n\tcur_s" +
+      "vityInfo\022\023\n\013activity_id\030\013 \001(\r\022\023\n\013is_fini" +
+      "shed\030\004 \001(\010\022\023\n\013schedule_id\030\002 \001(\r\022\026\n\016meet_" +
+      "cond_list\030\001 \003(\r\022\020\n\010end_time\030\005 \001(\r\022\022\n\nbeg" +
+      "in_time\030\006 \001(\r\022/\n\021watcher_info_list\030\n \003(\013" +
+      "2\024.ActivityWatcherInfo\022\030\n\020expire_cond_li" +
+      "st\030\014 \003(\r\022\025\n\ractivity_type\030\016 \001(\r\022\021\n\tcur_s" +
       "core\030? \001(\r\022\035\n\024first_day_start_time\030\365\002 \001(" +
       "\r\022\032\n\021taken_reward_list\030\262\006 \003(\r\022<\n\034activit" +
       "y_push_tips_data_list\030\327\007 \003(\0132\025.ActivityP" +
@@ -3539,7 +3435,7 @@ public final class ActivityInfoOuterClass {
     internal_static_ActivityInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ActivityInfo_descriptor,
-        new java.lang.String[] { "MeetCondList", "EndTime", "BeginTime", "IsFinished", "WatcherInfoList", "ExpireCondList", "ScheduleId", "ActivityType", "ActivityId", "CurScore", "FirstDayStartTime", "TakenRewardList", "ActivityPushTipsDataList", "ActivityCoinMap", "WishGiftNumMap", "MusicGameInfo", "Detail", });
+        new java.lang.String[] { "ActivityId", "IsFinished", "ScheduleId", "MeetCondList", "EndTime", "BeginTime", "WatcherInfoList", "ExpireCondList", "ActivityType", "CurScore", "FirstDayStartTime", "TakenRewardList", "ActivityPushTipsDataList", "ActivityCoinMap", "WishGiftNumMap", "MusicGameInfo", "Detail", });
     internal_static_ActivityInfo_ActivityCoinMapEntry_descriptor =
       internal_static_ActivityInfo_descriptor.getNestedTypes().get(0);
     internal_static_ActivityInfo_ActivityCoinMapEntry_fieldAccessorTable = new

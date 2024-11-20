@@ -2,30 +2,24 @@ package emu.grasscutter.server.http.dispatch;
 
 import static emu.grasscutter.config.Configuration.*;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
+import com.google.gson.*;
 import com.google.protobuf.ByteString;
-import emu.grasscutter.GameConstants;
-import emu.grasscutter.Grasscutter;
+import emu.grasscutter.*;
 import emu.grasscutter.Grasscutter.ServerRunMode;
 import emu.grasscutter.net.proto.QueryCurrRegionHttpRspOuterClass.QueryCurrRegionHttpRsp;
 import emu.grasscutter.net.proto.QueryRegionListHttpRspOuterClass.QueryRegionListHttpRsp;
 import emu.grasscutter.net.proto.RegionInfoOuterClass.RegionInfo;
 import emu.grasscutter.net.proto.RegionSimpleInfoOuterClass.RegionSimpleInfo;
-import emu.grasscutter.net.proto.ResVersionConfigOuterClass;
 import emu.grasscutter.net.proto.RetcodeOuterClass.Retcode;
 import emu.grasscutter.net.proto.StopServerInfoOuterClass.StopServerInfo;
 import emu.grasscutter.server.event.dispatch.*;
 import emu.grasscutter.server.http.Router;
 import emu.grasscutter.server.http.objects.QueryCurRegionRspJson;
-import emu.grasscutter.utils.Crypto;
-import emu.grasscutter.utils.JsonUtils;
-import emu.grasscutter.utils.Utils;
+import emu.grasscutter.utils.*;
 import io.javalin.Javalin;
 import io.javalin.http.Context;
 import java.time.Instant;
-import java.util.ArrayList;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Pattern;
 import org.slf4j.Logger;
@@ -78,6 +72,8 @@ public final class RegionHandler implements Router {
                         Grasscutter.getLogger().error("Region name already in use.");
                         return;
                     }
+
+                    // Create a region identifier.
                     var identifier =
                             RegionSimpleInfo.newBuilder()
                                     .setName(region.Name)
@@ -87,38 +83,14 @@ public final class RegionHandler implements Router {
                                     .build();
                     usedNames.add(region.Name);
                     servers.add(identifier);
-                    hotfix.Resource hotfix = new hotfix.Resource();
-                    RegionInfo regionInfo =
+                    
+                    // Create a region info object.
+                    var regionInfo =
                             RegionInfo.newBuilder()
                                     .setGateserverIp(region.Ip)
                                     .setGateserverPort(region.Port)
-                                    .setResourceUrl(hotfix.resourceUrl)
-                                    .setDataUrl(hotfix.dataUrl)
-                                    .setResourceUrlBak(hotfix.resourceUrlBak)
-                                    .setClientDataVersion(hotfix.clientDataVersion)
-                                    .setClientSilenceDataVersion(hotfix.clientSilenceDataVersion)
-                                    .setClientDataMd5(hotfix.clientDataMd5)
-                                    .setClientSilenceDataMd5(hotfix.clientSilenceDataMd5)
-                                    .setResVersionConfig(
-                                            ResVersionConfigOuterClass.ResVersionConfig.newBuilder()
-                                                    .setVersion(hotfix.resVersionConfig.version)
-                                                    .setMd5(hotfix.resVersionConfig.md5)
-                                                    .setReleaseTotalSize(hotfix.resVersionConfig.releaseTotalSize)
-                                                    .setVersionSuffix(hotfix.resVersionConfig.versionSuffix)
-                                                    .setBranch(hotfix.resVersionConfig.branch)
-                                                    .build())
-                                    .setClientVersionSuffix(hotfix.clientVersionSuffix)
-                                    .setClientSilenceVersionSuffix(hotfix.clientSilenceVersionSuffix)
-                                    .setNextResourceUrl(hotfix.nextResourceUrl)
-                                    .setNextResVersionConfig(
-                                            ResVersionConfigOuterClass.ResVersionConfig.newBuilder()
-                                                    .setVersion(hotfix.nextResVersionConfig.version)
-                                                    .setMd5(hotfix.nextResVersionConfig.md5)
-                                                    .setReleaseTotalSize(hotfix.nextResVersionConfig.releaseTotalSize)
-                                                    .setVersionSuffix(hotfix.nextResVersionConfig.versionSuffix)
-                                                    .setBranch(hotfix.nextResVersionConfig.branch))
                                     .build();
-                    QueryCurrRegionHttpRsp updatedQuery =
+                    var updatedQuery =
                             QueryCurrRegionHttpRsp.newBuilder()
                                     .setRegionInfo(regionInfo)
                                     .setClientSecretKey(ByteString.copyFrom(Crypto.DISPATCH_SEED))
